@@ -76,14 +76,15 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
                 <div style=\"margin-right: 50px;\">
                     <li id=\"lien1\">Événement</li>
                     <ul class=\"boite invisible\" id=\"liens1\">
-                        <li class=\"sous-boite\"><a href=\"\">Spectacle</a></li>
-                        <li class=\"sous-boite\"><a href=\"\">Info Pratique</a></li>
+                        <li class=\"sous-boite\"><a href=\"./manifestation\">Spectacle</a></li>
+                        <li class=\"sous-boite\"><a href=\"./lieu\">Lieu</a></li>
+                        <li class=\"sous-boite\"><a href=\"./infoPratique\">Info Pratique</a></li>
                     </ul>
                 </div>
                 <div>
                     <li id=\"lien2\">Compte</li>
                     <ul class=\"boite invisible\" id=\"liens2\">
-                        <li class=\"sous-boite\"><a href=\"\">Profil</a></li>
+                        <li class=\"sous-boite\"><a href=\"./profil/\">Profil</a></li>
                         <li class=\"sous-boite\"><a href=\"\">Déconnexion</a></li>
                     </ul>
                 </div>
@@ -104,7 +105,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
                 </ul>
             </nav>
             <img src=";
-        // line 52
+        // line 53
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville.png"), "html", null, true);
         echo " alt=\"Logo de la ville\" class=\"fluid_logo_nav\">
             <a href=\"#\" id=\"openBtn\">
@@ -117,12 +118,12 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         </div>
     </header>
         ";
-        // line 62
+        // line 63
         $this->displayBlock('content', $context, $blocks);
-        // line 64
+        // line 65
         echo "    <footer>
         <img src=";
-        // line 65
+        // line 66
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville.png"), "html", null, true);
         echo " alt=\"Logo de la ville\" class=\"fluid_logo_footer\">
         <h5>1 Rue de l'Usine</h5>
@@ -210,7 +211,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
 
     }
 
-    // line 62
+    // line 63
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -220,7 +221,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 63
+        // line 64
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -242,7 +243,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
 
     public function getDebugInfo()
     {
-        return array (  224 => 63,  214 => 62,  201 => 14,  191 => 13,  178 => 10,  168 => 9,  149 => 5,  126 => 65,  123 => 64,  121 => 62,  108 => 52,  73 => 20,  67 => 16,  65 => 13,  62 => 12,  60 => 9,  53 => 5,  47 => 1,);
+        return array (  225 => 64,  215 => 63,  202 => 14,  192 => 13,  179 => 10,  169 => 9,  150 => 5,  127 => 66,  124 => 65,  122 => 63,  109 => 53,  73 => 20,  67 => 16,  65 => 13,  62 => 12,  60 => 9,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -271,14 +272,15 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
                 <div style=\"margin-right: 50px;\">
                     <li id=\"lien1\">Événement</li>
                     <ul class=\"boite invisible\" id=\"liens1\">
-                        <li class=\"sous-boite\"><a href=\"\">Spectacle</a></li>
-                        <li class=\"sous-boite\"><a href=\"\">Info Pratique</a></li>
+                        <li class=\"sous-boite\"><a href=\"./manifestation\">Spectacle</a></li>
+                        <li class=\"sous-boite\"><a href=\"./lieu\">Lieu</a></li>
+                        <li class=\"sous-boite\"><a href=\"./infoPratique\">Info Pratique</a></li>
                     </ul>
                 </div>
                 <div>
                     <li id=\"lien2\">Compte</li>
                     <ul class=\"boite invisible\" id=\"liens2\">
-                        <li class=\"sous-boite\"><a href=\"\">Profil</a></li>
+                        <li class=\"sous-boite\"><a href=\"./profil/\">Profil</a></li>
                         <li class=\"sous-boite\"><a href=\"\">Déconnexion</a></li>
                     </ul>
                 </div>

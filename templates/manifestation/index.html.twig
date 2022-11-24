@@ -7,7 +7,8 @@
         <section class="template_manifestation">
         {% for Manifestation in Manifestations %}
                 <div class="manifestation">
-                    <img src={{ asset('media/') }}{{ Manifestation.getAffiche }} class="image_manifestation">
+                    <a href=""><img src={{ asset('media/') }}{{ Manifestation.getAffiche }} class="image_manifestation"></a>
+                    <img src={{ asset('media/notice.png')}} alt="icone_notice" class="notice">
                     <p>{{ Manifestation.getDate }}</p>
                     <p>{{ Manifestation.getTitre }}</p>
                     <p>{{ Manifestation.getDescription }} </p>

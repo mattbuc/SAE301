@@ -17,6 +17,8 @@ return [
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], [], []],
     'app_accueil' => [[], ['_controller' => 'App\\Controller\\AccueilController::index'], [], [['text', '/']], [], [], []],
+    'app_infopratique' => [[], ['_controller' => 'App\\Controller\\InfoPratiqueController::index'], [], [['text', '/infoPratique']], [], [], []],
+    'app_lieu' => [[], ['_controller' => 'App\\Controller\\LieuController::index'], [], [['text', '/lieu']], [], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\LoginController::index'], [], [['text', '/login']], [], [], []],
     'app_manifestation' => [[], ['_controller' => 'App\\Controller\\ManifestationController::manifestation'], [], [['text', '/manifestation']], [], [], []],
     'app_profil' => [[], ['_controller' => 'App\\Controller\\ProfilController::index'], [], [['text', '/profil']], [], [], []],

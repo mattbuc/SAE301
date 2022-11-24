@@ -114,26 +114,30 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
         foreach ($context['_seq'] as $context["_key"] => $context["Manifestation"]) {
             // line 9
             echo "                <div class=\"manifestation\">
-                    <img src=";
+                    <a href=\"\"><img src=";
             // line 10
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/"), "html", null, true);
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getAffiche", [], "any", false, false, false, 10), "html", null, true);
-            echo " class=\"image_manifestation\">
-                    <p>";
+            echo " class=\"image_manifestation\"></a>
+                    <img src=";
             // line 11
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getDate", [], "any", false, false, false, 11), "html", null, true);
-            echo "</p>
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/notice.png"), "html", null, true);
+            echo " alt=\"icone_notice\" class=\"notice\">
                     <p>";
             // line 12
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getTitre", [], "any", false, false, false, 12), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getDate", [], "any", false, false, false, 12), "html", null, true);
             echo "</p>
                     <p>";
             // line 13
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getDescription", [], "any", false, false, false, 13), "html", null, true);
-            echo " </p>
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getTitre", [], "any", false, false, false, 13), "html", null, true);
+            echo "</p>
                     <p>";
             // line 14
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getLieu", [], "any", false, false, false, 14), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getDescription", [], "any", false, false, false, 14), "html", null, true);
+            echo " </p>
+                    <p>";
+            // line 15
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getLieu", [], "any", false, false, false, 15), "html", null, true);
             echo "</p>
                 </div>
         ";
@@ -141,7 +145,7 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['Manifestation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 17
+        // line 18
         echo "        </section>
     ";
         
@@ -164,7 +168,7 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
 
     public function getDebugInfo()
     {
-        return array (  145 => 17,  136 => 14,  132 => 13,  128 => 12,  124 => 11,  119 => 10,  116 => 9,  112 => 8,  109 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  149 => 18,  140 => 15,  136 => 14,  132 => 13,  128 => 12,  124 => 11,  119 => 10,  116 => 9,  112 => 8,  109 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -178,7 +182,8 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
         <section class=\"template_manifestation\">
         {% for Manifestation in Manifestations %}
                 <div class=\"manifestation\">
-                    <img src={{ asset('media/') }}{{ Manifestation.getAffiche }} class=\"image_manifestation\">
+                    <a href=\"\"><img src={{ asset('media/') }}{{ Manifestation.getAffiche }} class=\"image_manifestation\"></a>
+                    <img src={{ asset('media/notice.png')}} alt=\"icone_notice\" class=\"notice\">
                     <p>{{ Manifestation.getDate }}</p>
                     <p>{{ Manifestation.getTitre }}</p>
                     <p>{{ Manifestation.getDescription }} </p>
