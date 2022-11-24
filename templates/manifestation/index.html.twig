@@ -11,8 +11,8 @@
                     <img src={{ asset('media/notice.png')}} alt="icone_notice" class="notice">
                     <p>{{ Manifestation.getDate }}</p>
                     <p>{{ Manifestation.getTitre }}</p>
-                    <p>{{ Manifestation.getDescription }} </p>
-                    <p>{{ Manifestation.getLieu }}</p>
+                    <p>{{ Manifestation.getDescription }}</p>
+                    <p>{{ Manifestation.getLieu.getLieu }}</p>
                 </div>
         {% endfor %}
         </section>

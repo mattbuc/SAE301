@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\LieuRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: LieuRepository::class)]
@@ -21,6 +23,15 @@ class Lieu
 
     #[ORM\Column]
     private ?int $capacite = null;
+
+    #[ORM\OneToMany(mappedBy: 'lieu', targetEntity: Manifestation::class)]
+    private Collection $manifestation;
+
+    public function __construct()
+    {
+        $this->manifestations = new ArrayCollection();
+        $this->manifestation = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -62,4 +73,35 @@ class Lieu
 
         return $this;
     }
+
+    /**
+     * @return Collection<int, Manifestation>
+     */
+    public function getManifestation(): Collection
+    {
+        return $this->manifestation;
+    }
+
+    public function addManifestation(Manifestation $manifestation): self
+    {
+        if (!$this->manifestation->contains($manifestation)) {
+            $this->manifestation->add($manifestation);
+            $manifestation->setLieu($this);
+        }
+
+        return $this;
+    }
+
+    public function removeManifestation(Manifestation $manifestation): self
+    {
+        if ($this->manifestation->removeElement($manifestation)) {
+            // set the owning side to null (unless already changed)
+            if ($manifestation->getLieu() === $this) {
+                $manifestation->setLieu(null);
+            }
+        }
+
+        return $this;
+    }
+
 }

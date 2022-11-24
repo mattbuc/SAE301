@@ -35,8 +35,10 @@ class Manifestation
     #[ORM\Column(length: 50)]
     private ?string $date = null;
 
-    #[ORM\Column(length: 35)]
-    private ?string $lieu = null;
+    #[ORM\ManyToOne(inversedBy: 'manifestation')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Lieu $lieu = null;
+
 
     public function getId(): ?int
     {
@@ -127,15 +129,18 @@ class Manifestation
         return $this;
     }
 
-    public function getLieu(): ?string
+    public function getLieu(): ?Lieu
     {
         return $this->lieu;
     }
 
-    public function setLieu(string $lieu): self
+    public function setLieu(?Lieu $lieu): self
     {
         $this->lieu = $lieu;
 
         return $this;
     }
+
+
+
 }

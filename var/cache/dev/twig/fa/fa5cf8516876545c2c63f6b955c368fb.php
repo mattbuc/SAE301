@@ -134,10 +134,10 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
                     <p>";
             // line 14
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getDescription", [], "any", false, false, false, 14), "html", null, true);
-            echo " </p>
+            echo "</p>
                     <p>";
             // line 15
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getLieu", [], "any", false, false, false, 15), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getLieu", [], "any", false, false, false, 15), "getLieu", [], "any", false, false, false, 15), "html", null, true);
             echo "</p>
                 </div>
         ";
@@ -186,8 +186,8 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
                     <img src={{ asset('media/notice.png')}} alt=\"icone_notice\" class=\"notice\">
                     <p>{{ Manifestation.getDate }}</p>
                     <p>{{ Manifestation.getTitre }}</p>
-                    <p>{{ Manifestation.getDescription }} </p>
-                    <p>{{ Manifestation.getLieu }}</p>
+                    <p>{{ Manifestation.getDescription }}</p>
+                    <p>{{ Manifestation.getLieu.getLieu }}</p>
                 </div>
         {% endfor %}
         </section>
