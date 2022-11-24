@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les manifestations de la ville.{% endblock %}
+
+{% block body %}
+    {% block content %}
+        <section class="template_manifestation">
+        {% for Manifestation in Manifestations %}
+                <div class="manifestation">
+                    <img src={{ asset('media/') }}{{ Manifestation.getAffiche }} class="image_manifestation">
+                    <p>{{ Manifestation.getDate }}</p>
+                    <p>{{ Manifestation.getTitre }}</p>
+                    <p>{{ Manifestation.getDescription }} </p>
+                    <p>{{ Manifestation.getLieu }}</p>
+                </div>
+        {% endfor %}
+        </section>
+    {% endblock %}
+{% endblock %}

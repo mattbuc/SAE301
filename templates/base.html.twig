@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}SAE301{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Feuille de style -->
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        {% endblock %}
+        <!-- Fichiers js -->
+        {% block javascripts %}
+            <script src="{{ asset('assets/js/main.js') }}" defer></script>
+        {% endblock %}
+    </head>
+    <body>
+    <header>
+        <nav class="desktop_nav">
+            <a href="" class="logo_lien"><img src={{asset('media/Logo_ville.png')}} alt="Logo_de_la_ville" class="fluid_logo_nav"></a>
+            <ul class="navbar">
+                <div style="margin-right: 50px;">
+                    <li id="lien1">Événement</li>
+                    <ul class="boite invisible" id="liens1">
+                        <li class="sous-boite"><a href="">Spectacle</a></li>
+                        <li class="sous-boite"><a href="">Info Pratique</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <li id="lien2">Compte</li>
+                    <ul class="boite invisible" id="liens2">
+                        <li class="sous-boite"><a href="">Profil</a></li>
+                        <li class="sous-boite"><a href="">Déconnexion</a></li>
+                    </ul>
+                </div>
+                </div>
+        </nav>
+        <div class="nav_responsive">
+            <nav id="mySidenav" class="sidenav">
+                <a id="closeBtn" href="#" class="close">×</a>
+                <ul>
+                    <li class="li_nav">
+                        <a href="">Accueil</a>
+                        <a href="">Profil</a>
+                        <a href="">Événement</a>
+                        <a href="">Panier</a>
+                        <a href="">Déconnexion</a>
+                        <a href="">Info pratique</a>
+                    </li>
+                </ul>
+            </nav>
+            <img src={{asset('media/Logo_ville.png')}} alt="Logo de la ville" class="fluid_logo_nav">
+            <a href="#" id="openBtn">
+            <span class="burger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            </a>
+        </div>
+    </header>
+        {% block content %}
+        {% endblock %}
+    <footer>
+        <img src={{asset('media/Logo_ville.png')}} alt="Logo de la ville" class="fluid_logo_footer">
+        <h5>1 Rue de l'Usine</h5>
+        <br>
+        <h5>51420 Witry-lès-Reims</h5>
+        <br>
+        <h5>03 26 97 07 25</h5>
+        <br>
+        <h5>contact.culture@witry-les-reims.com</h5>
+        <br>
+    </footer>
+    </body>
+</html>
