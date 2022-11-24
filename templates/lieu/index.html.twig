@@ -4,17 +4,20 @@
 
 {% block body %}
     {% block content %}
+        {%for Lieu in Lieux %}
         <section class="lesLieux">
             <div class="lieu">
-                <img src="./image/americanhoney.jpg" alt="" class="lieu_image">
+                {# <img src={{ asset('media/') }}{{ Lieu.getAffiche}} alt="" class="lieu_image"> #}
+
                 <div class="lieu_details">
-                    <p>25 Novembre</p>
+                    <p>{{ Lieu.getLieu }}</p>
                     <br>
-                    <p>PROFITEZ DU SPECTACLE qsdqdqfhqifhqidgqidbqzdvqidb</p>
+                    <p>La capacité de l'établissement est de : {{ Lieu.getCapacite }} places</p>
                     <br>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla deserunt atque accusamus sit ... </p>
+                    <p>L'adresse est au : {{ Lieu.getAdresse }} </p>
                 </div>
             </div>
         </section>
-        {% endblock %}
+        {% endfor %}
+    {% endblock %}
 {% endblock %}

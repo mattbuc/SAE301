@@ -85,6 +85,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
                     <li id=\"lien2\">Compte</li>
                     <ul class=\"boite invisible\" id=\"liens2\">
                         <li class=\"sous-boite\"><a href=\"./profil/\">Profil</a></li>
+                        <li class=\"sous-boite\"><a href=\"./panier/\">Panier</a></li>
                         <li class=\"sous-boite\"><a href=\"\">Déconnexion</a></li>
                     </ul>
                 </div>
@@ -105,7 +106,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
                 </ul>
             </nav>
             <img src=";
-        // line 53
+        // line 54
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville.png"), "html", null, true);
         echo " alt=\"Logo de la ville\" class=\"fluid_logo_nav\">
             <a href=\"#\" id=\"openBtn\">
@@ -118,12 +119,12 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         </div>
     </header>
         ";
-        // line 63
+        // line 64
         $this->displayBlock('content', $context, $blocks);
-        // line 65
+        // line 66
         echo "    <footer>
         <img src=";
-        // line 66
+        // line 67
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville.png"), "html", null, true);
         echo " alt=\"Logo de la ville\" class=\"fluid_logo_footer\">
         <h5>1 Rue de l'Usine</h5>
@@ -211,7 +212,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
 
     }
 
-    // line 63
+    // line 64
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -221,7 +222,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 64
+        // line 65
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -243,7 +244,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
 
     public function getDebugInfo()
     {
-        return array (  225 => 64,  215 => 63,  202 => 14,  192 => 13,  179 => 10,  169 => 9,  150 => 5,  127 => 66,  124 => 65,  122 => 63,  109 => 53,  73 => 20,  67 => 16,  65 => 13,  62 => 12,  60 => 9,  53 => 5,  47 => 1,);
+        return array (  226 => 65,  216 => 64,  203 => 14,  193 => 13,  180 => 10,  170 => 9,  151 => 5,  128 => 67,  125 => 66,  123 => 64,  110 => 54,  73 => 20,  67 => 16,  65 => 13,  62 => 12,  60 => 9,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -281,6 +282,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
                     <li id=\"lien2\">Compte</li>
                     <ul class=\"boite invisible\" id=\"liens2\">
                         <li class=\"sous-boite\"><a href=\"./profil/\">Profil</a></li>
+                        <li class=\"sous-boite\"><a href=\"./panier/\">Panier</a></li>
                         <li class=\"sous-boite\"><a href=\"\">Déconnexion</a></li>
                     </ul>
                 </div>

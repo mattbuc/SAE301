@@ -20,11 +20,8 @@ class ManifestationController extends AbstractController
 
         $manifestations = $manifestationRepository->findAll();
 
-        $lieux = $lieuRepository->findAll();
-
         return $this->render('manifestation/index.html.twig', [
             'Manifestations' => $manifestations,
-            'Lieux' => $lieux,
         ]);
     }
 }
