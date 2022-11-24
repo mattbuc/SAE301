@@ -84,3 +84,5 @@ c41840,172.20.0.1,GET,http://localhost:8088/SAE301/index.php/manifestation,16692
 93d14d,172.20.0.1,GET,http://localhost:8088/SAE301/index.php/manifestation,1669287044,,200
 f3ce5d,172.20.0.1,GET,http://localhost:8088/SAE301/index.php/manifestation,1669287064,,200
 05c2e1,172.20.0.1,GET,http://localhost:8088/SAE301/index.php/manifestation,1669287249,,200
+83a1ba,172.20.0.1,GET,http://localhost:8088/SAE301/,1669299565,,200
+b26473,172.20.0.1,GET,http://localhost:8088/SAE301/index.php/manifestation,1669299584,,200
