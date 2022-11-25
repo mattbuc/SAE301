@@ -68,11 +68,12 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
     <body>
     <header>
         <nav class=\"desktop_nav\">
-            <a href=\"\" class=\"logo_lien\"><img src=";
+            <a href=\"./accueil\" class=\"logo_lien\"><img src=";
         // line 20
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville.png"), "html", null, true);
         echo " alt=\"Logo_de_la_ville\" class=\"fluid_logo_nav\"></a>
             <ul class=\"navbar\">
+                <a href=\"./accueil\" style=\"margin-right: 50px;\">Accueil</a>
                 <div style=\"margin-right: 50px;\">
                     <li id=\"lien1\">Événement</li>
                     <ul class=\"boite invisible\" id=\"liens1\">
@@ -106,7 +107,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
                 </ul>
             </nav>
             <img src=";
-        // line 54
+        // line 55
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville.png"), "html", null, true);
         echo " alt=\"Logo de la ville\" class=\"fluid_logo_nav\">
             <a href=\"#\" id=\"openBtn\">
@@ -119,12 +120,12 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         </div>
     </header>
         ";
-        // line 64
+        // line 65
         $this->displayBlock('content', $context, $blocks);
-        // line 66
+        // line 67
         echo "    <footer>
         <img src=";
-        // line 67
+        // line 68
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville.png"), "html", null, true);
         echo " alt=\"Logo de la ville\" class=\"fluid_logo_footer\">
         <h5>1 Rue de l'Usine</h5>
@@ -212,7 +213,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
 
     }
 
-    // line 64
+    // line 65
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -222,7 +223,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 65
+        // line 66
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -244,7 +245,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
 
     public function getDebugInfo()
     {
-        return array (  226 => 65,  216 => 64,  203 => 14,  193 => 13,  180 => 10,  170 => 9,  151 => 5,  128 => 67,  125 => 66,  123 => 64,  110 => 54,  73 => 20,  67 => 16,  65 => 13,  62 => 12,  60 => 9,  53 => 5,  47 => 1,);
+        return array (  227 => 66,  217 => 65,  204 => 14,  194 => 13,  181 => 10,  171 => 9,  152 => 5,  129 => 68,  126 => 67,  124 => 65,  111 => 55,  73 => 20,  67 => 16,  65 => 13,  62 => 12,  60 => 9,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -268,8 +269,9 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
     <body>
     <header>
         <nav class=\"desktop_nav\">
-            <a href=\"\" class=\"logo_lien\"><img src={{asset('media/Logo_ville.png')}} alt=\"Logo_de_la_ville\" class=\"fluid_logo_nav\"></a>
+            <a href=\"./accueil\" class=\"logo_lien\"><img src={{asset('media/Logo_ville.png')}} alt=\"Logo_de_la_ville\" class=\"fluid_logo_nav\"></a>
             <ul class=\"navbar\">
+                <a href=\"./accueil\" style=\"margin-right: 50px;\">Accueil</a>
                 <div style=\"margin-right: 50px;\">
                     <li id=\"lien1\">Événement</li>
                     <ul class=\"boite invisible\" id=\"liens1\">

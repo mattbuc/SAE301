@@ -28,7 +28,6 @@ class __TwigTemplate_ce830c6ec324a7a088bd6623aa9a5de6 extends Template
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
             'content' => [$this, 'block_content'],
-            'footer' => [$this, 'block_footer'],
         ];
     }
 
@@ -129,35 +128,12 @@ class __TwigTemplate_ce830c6ec324a7a088bd6623aa9a5de6 extends Template
             <input type=\"submit\" value=\"Valider ma commande.\">
         </form>
         <hr>
-        ";
-        // line 29
-        $this->displayBlock('footer', $context, $blocks);
-        // line 32
-        echo "        <script src=";
+
+        <script src=";
+        // line 30
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/scriptpanier.js"), "html", null, true);
         echo "></script>
         ";
-        
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
-
-        
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
-
-    }
-
-    // line 29
-    public function block_footer($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
-
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
-
-        // line 30
-        echo "            <footer class=\"footer_stick_bottom\"></footer>
-            ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -178,7 +154,7 @@ class __TwigTemplate_ce830c6ec324a7a088bd6623aa9a5de6 extends Template
 
     public function getDebugInfo()
     {
-        return array (  159 => 30,  149 => 29,  136 => 32,  134 => 29,  110 => 7,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
+        return array (  134 => 30,  109 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -211,9 +187,7 @@ class __TwigTemplate_ce830c6ec324a7a088bd6623aa9a5de6 extends Template
             <input type=\"submit\" value=\"Valider ma commande.\">
         </form>
         <hr>
-        {% block footer %}
-            <footer class=\"footer_stick_bottom\"></footer>
-            {% endblock %}
+
         <script src={{ asset('assets/js/scriptpanier.js') }}></script>
         {% endblock %}
 {% endblock %}
