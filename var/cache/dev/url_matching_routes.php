@@ -15,12 +15,19 @@ return [
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'app_accueil', '_controller' => 'App\\Controller\\AccueilController::index'], null, null, null, false, false, null]],
+        '/connexion' => [[['_route' => 'app_connexion', '_controller' => 'App\\Controller\\ConnexionController::index'], null, null, null, false, false, null]],
+        '/contact' => [[['_route' => 'app_contact', '_controller' => 'App\\Controller\\ContactController::index'], null, null, null, false, false, null]],
+        '/finalisation' => [[['_route' => 'app_finalisation', '_controller' => 'App\\Controller\\FinalisationController::index'], null, null, null, false, false, null]],
         '/infoPratique' => [[['_route' => 'app_infopratique', '_controller' => 'App\\Controller\\InfoPratiqueController::index'], null, null, null, false, false, null]],
         '/lieu' => [[['_route' => 'app_lieu', '_controller' => 'App\\Controller\\LieuController::manifestation'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\LoginController::index'], null, null, null, false, false, null]],
-        '/manifestation' => [[['_route' => 'app_manifestation', '_controller' => 'App\\Controller\\ManifestationController::manifestation'], null, null, null, false, false, null]],
+        '/manifestation' => [
+            [['_route' => 'manifestation', '_controller' => 'App\\Controller\\ManifestationController::allManifestation'], null, null, null, false, false, null],
+            [['_route' => 'search_manifestation', '_controller' => 'App\\Controller\\ManifestationController::searchManifestation'], null, null, null, false, false, null],
+        ],
         '/panier' => [[['_route' => 'app_panier', '_controller' => 'App\\Controller\\PanierController::index'], null, null, null, false, false, null]],
         '/profil' => [[['_route' => 'app_profil', '_controller' => 'App\\Controller\\ProfilController::index'], null, null, null, false, false, null]],
+        '/reservation' => [[['_route' => 'app_reservation', '_controller' => 'App\\Controller\\ReservationController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

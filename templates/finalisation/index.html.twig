@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Finalisation{% endblock %}
+
+{% block body %}
+{% block content %}
+    {% block php %}
+    <?php
+    echo "<h1>il reste à sauvegarder tout ça...</h1>"
+    echo $_POST['liste']
+    ?>
+        {% endblock %}
+    {% endblock %}
+{% endblock %}

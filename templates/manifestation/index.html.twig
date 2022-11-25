@@ -4,6 +4,7 @@
 
 {% block body %}
     {% block content %}
+        {{ form(search_form) }}
         <section class="template_manifestation">
         {% for Manifestation in Manifestations %}
                 <div class="manifestation">
@@ -14,7 +15,7 @@
                     <p>{{ Manifestation.getDescription }}</p>
                     <p>{{ Manifestation.getLieu.getLieu }}</p>
                 </div>
-        {% endfor %}
+            {% endfor %}
         </section>
     {% endblock %}
 {% endblock %}

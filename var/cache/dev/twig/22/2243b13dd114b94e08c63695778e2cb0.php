@@ -27,6 +27,8 @@ class __TwigTemplate_ce830c6ec324a7a088bd6623aa9a5de6 extends Template
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
+            'content' => [$this, 'block_content'],
+            'footer' => [$this, 'block_footer'],
         ];
     }
 
@@ -85,30 +87,77 @@ class __TwigTemplate_ce830c6ec324a7a088bd6623aa9a5de6 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        echo "    ";
+        $this->displayBlock('content', $context, $blocks);
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
-<div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        echo "! ✅</h1>
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/var/www/SAE301/src/Controller/PanierController.php", 0), "html", null, true);
-        echo "\">src/Controller/PanierController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/var/www/SAE301/templates/panier/index.html.twig", 0), "html", null, true);
-        echo "\">templates/panier/index.html.twig</a></code></li>
-    </ul>
-</div>
-";
+    }
+
+    public function block_content($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
+
+        // line 7
+        echo "        <table>
+            <thead>
+            <tr>
+                <th>article</th>
+                <th>quantite</th>
+                <th>prix unitaire</th>
+                <th>prix total</th>
+            </tr>
+            </thead>
+            <tbody id=\"zone\">
+
+
+
+            </tbody>
+            <tfoot><tr><td id=\"bas\" colspan=\"3\"></td><td><span id=\"total\">0</span>€</td></tr></tfoot>
+        </table>
+        <hr>
+        <form action=\"./finalisation\" method=\"post\">
+            <input type=\"hidden\" name=\"liste\" id=\"liste\">
+            <input type=\"submit\" value=\"Valider ma commande.\">
+        </form>
+        <hr>
+        ";
+        // line 29
+        $this->displayBlock('footer', $context, $blocks);
+        // line 32
+        echo "        <script src=";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/scriptpanier.js"), "html", null, true);
+        echo "></script>
+        ";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 29
+    public function block_footer($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
+
+        // line 30
+        echo "            <footer class=\"footer_stick_bottom\"></footer>
+            ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -129,7 +178,7 @@ class __TwigTemplate_ce830c6ec324a7a088bd6623aa9a5de6 extends Template
 
     public function getDebugInfo()
     {
-        return array (  107 => 17,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  159 => 30,  149 => 29,  136 => 32,  134 => 29,  110 => 7,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -139,20 +188,34 @@ class __TwigTemplate_ce830c6ec324a7a088bd6623aa9a5de6 extends Template
 {% block title %}Hello PanierController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    {% block content %}
+        <table>
+            <thead>
+            <tr>
+                <th>article</th>
+                <th>quantite</th>
+                <th>prix unitaire</th>
+                <th>prix total</th>
+            </tr>
+            </thead>
+            <tbody id=\"zone\">
 
-<div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"{{ '/var/www/SAE301/src/Controller/PanierController.php'|file_link(0) }}\">src/Controller/PanierController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ '/var/www/SAE301/templates/panier/index.html.twig'|file_link(0) }}\">templates/panier/index.html.twig</a></code></li>
-    </ul>
-</div>
+
+            </tbody>
+            <tfoot><tr><td id=\"bas\" colspan=\"3\"></td><td><span id=\"total\">0</span>€</td></tr></tfoot>
+        </table>
+        <hr>
+        <form action=\"./finalisation\" method=\"post\">
+            <input type=\"hidden\" name=\"liste\" id=\"liste\">
+            <input type=\"submit\" value=\"Valider ma commande.\">
+        </form>
+        <hr>
+        {% block footer %}
+            <footer class=\"footer_stick_bottom\"></footer>
+            {% endblock %}
+        <script src={{ asset('assets/js/scriptpanier.js') }}></script>
+        {% endblock %}
 {% endblock %}
 ", "panier/index.html.twig", "/var/www/SAE301/templates/panier/index.html.twig");
     }
