@@ -107,7 +107,7 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
 
         // line 7
         echo "        ";
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["search_form"]) || array_key_exists("search_form", $context) ? $context["search_form"] : (function () { throw new RuntimeError('Variable "search_form" does not exist.', 7, $this->source); })()), 'form');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 7, $this->source); })()), 'form');
         echo "
         <section class=\"template_manifestation\">
         ";
@@ -117,8 +117,10 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
         foreach ($context['_seq'] as $context["_key"] => $context["Manifestation"]) {
             // line 10
             echo "                <div class=\"manifestation\">
-                    <a href=\"\"><img src=";
+                    <a href=./manifestation/";
             // line 11
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "GetId", [], "any", false, false, false, 11), "html", null, true);
+            echo "><img src=";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/"), "html", null, true);
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getAffiche", [], "any", false, false, false, 11), "html", null, true);
             echo " class=\"image_manifestation\"></a>
@@ -171,7 +173,7 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
 
     public function getDebugInfo()
     {
-        return array (  152 => 19,  143 => 16,  139 => 15,  135 => 14,  131 => 13,  127 => 12,  122 => 11,  119 => 10,  115 => 9,  109 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  154 => 19,  145 => 16,  141 => 15,  137 => 14,  133 => 13,  129 => 12,  122 => 11,  119 => 10,  115 => 9,  109 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -182,11 +184,11 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
 
 {% block body %}
     {% block content %}
-        {{ form(search_form) }}
+        {{ form(form) }}
         <section class=\"template_manifestation\">
         {% for Manifestation in Manifestations %}
                 <div class=\"manifestation\">
-                    <a href=\"\"><img src={{ asset('media/') }}{{ Manifestation.getAffiche }} class=\"image_manifestation\"></a>
+                    <a href=./manifestation/{{ Manifestation.GetId }}><img src={{ asset('media/') }}{{ Manifestation.getAffiche }} class=\"image_manifestation\"></a>
                     <img src={{ asset('media/notice.png')}} alt=\"icone_notice\" class=\"notice\">
                     <p>{{ Manifestation.getDate }}</p>
                     <p>{{ Manifestation.getTitre }}</p>

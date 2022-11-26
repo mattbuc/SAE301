@@ -29,7 +29,6 @@ class Lieu
 
     public function __construct()
     {
-        $this->manifestations = new ArrayCollection();
         $this->manifestation = new ArrayCollection();
     }
 

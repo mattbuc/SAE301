@@ -24,7 +24,7 @@ return [
     'app_lieu' => [[], ['_controller' => 'App\\Controller\\LieuController::manifestation'], [], [['text', '/lieu']], [], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\LoginController::index'], [], [['text', '/login']], [], [], []],
     'manifestation' => [[], ['_controller' => 'App\\Controller\\ManifestationController::allManifestation'], [], [['text', '/manifestation']], [], [], []],
-    'search_manifestation' => [[], ['_controller' => 'App\\Controller\\ManifestationController::searchManifestation'], [], [['text', '/manifestation']], [], [], []],
+    'manifestation_detail' => [['id'], ['_controller' => 'App\\Controller\\ManifestationController::afficherManifestation'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/manifestation']], [], [], []],
     'app_panier' => [[], ['_controller' => 'App\\Controller\\PanierController::index'], [], [['text', '/panier']], [], [], []],
     'app_profil' => [[], ['_controller' => 'App\\Controller\\ProfilController::index'], [], [['text', '/profil']], [], [], []],
     'app_reservation' => [[], ['_controller' => 'App\\Controller\\ReservationController::index'], [], [['text', '/reservation']], [], [], []],

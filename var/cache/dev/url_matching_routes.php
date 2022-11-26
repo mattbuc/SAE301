@@ -21,10 +21,7 @@ return [
         '/infoPratique' => [[['_route' => 'app_infopratique', '_controller' => 'App\\Controller\\InfoPratiqueController::index'], null, null, null, false, false, null]],
         '/lieu' => [[['_route' => 'app_lieu', '_controller' => 'App\\Controller\\LieuController::manifestation'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\LoginController::index'], null, null, null, false, false, null]],
-        '/manifestation' => [
-            [['_route' => 'manifestation', '_controller' => 'App\\Controller\\ManifestationController::allManifestation'], null, null, null, false, false, null],
-            [['_route' => 'search_manifestation', '_controller' => 'App\\Controller\\ManifestationController::searchManifestation'], null, null, null, false, false, null],
-        ],
+        '/manifestation' => [[['_route' => 'manifestation', '_controller' => 'App\\Controller\\ManifestationController::allManifestation'], null, null, null, false, false, null]],
         '/panier' => [[['_route' => 'app_panier', '_controller' => 'App\\Controller\\PanierController::index'], null, null, null, false, false, null]],
         '/profil' => [[['_route' => 'app_profil', '_controller' => 'App\\Controller\\ProfilController::index'], null, null, null, false, false, null]],
         '/reservation' => [[['_route' => 'app_reservation', '_controller' => 'App\\Controller\\ReservationController::index'], null, null, null, false, false, null]],
@@ -46,6 +43,7 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
+                .'|/manifestation/([^/]++)(*:192)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -55,8 +53,9 @@ return [
         116 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        159 => [
-            [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
+        159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
+        192 => [
+            [['_route' => 'manifestation_detail', '_controller' => 'App\\Controller\\ManifestationController::afficherManifestation'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

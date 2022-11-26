@@ -70,7 +70,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         <nav class=\"desktop_nav\">
             <a href=\"./accueil\" class=\"logo_lien\"><img src=";
         // line 20
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville2.png"), "html", null, true);
         echo " alt=\"Logo_de_la_ville\" class=\"fluid_logo_nav\"></a>
             <ul class=\"navbar\">
                 <a href=\"./accueil\" style=\"margin-right: 50px;\">Accueil</a>
@@ -97,18 +97,18 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
                 <a id=\"closeBtn\" href=\"#\" class=\"close\">×</a>
                 <ul>
                     <li class=\"li_nav\">
-                        <a href=\"\">Accueil</a>
-                        <a href=\"\">Profil</a>
-                        <a href=\"\">Événement</a>
-                        <a href=\"\">Panier</a>
-                        <a href=\"\">Déconnexion</a>
-                        <a href=\"\">Info pratique</a>
+                        <a href=\"./accueil\">Accueil</a>
+                        <a href=\"./profil\">Profil</a>
+                        <a href=\"./manifestation\">Événement</a>
+                        <a href=\"./panier\">Panier</a>
+                        <a href=\"./\">Déconnexion</a>
+                        <a href=\"./infoPratique\">Info pratique</a>
                     </li>
                 </ul>
             </nav>
             <img src=";
         // line 55
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville2.png"), "html", null, true);
         echo " alt=\"Logo de la ville\" class=\"fluid_logo_nav\">
             <a href=\"#\" id=\"openBtn\">
             <span class=\"burger-icon\">
@@ -126,15 +126,15 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         echo "    <footer>
         <img src=";
         // line 68
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville2.png"), "html", null, true);
         echo " alt=\"Logo de la ville\" class=\"fluid_logo_footer\">
-        <h5>1 Rue de l'Usine</h5>
+        <h5>2 rue Guillaume de Machault</h5>
         <br>
-        <h5>51420 Witry-lès-Reims</h5>
+        <h5>51110 Reims</h5>
         <br>
         <h5>03 26 97 07 25</h5>
         <br>
-        <h5>contact.culture@witry-les-reims.com</h5>
+        <h5>contact.culture@reims.com</h5>
         <br>
     </footer>
     </body>
@@ -269,7 +269,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
     <body>
     <header>
         <nav class=\"desktop_nav\">
-            <a href=\"./accueil\" class=\"logo_lien\"><img src={{asset('media/Logo_ville.png')}} alt=\"Logo_de_la_ville\" class=\"fluid_logo_nav\"></a>
+            <a href=\"./accueil\" class=\"logo_lien\"><img src={{asset('media/Logo_ville2.png')}} alt=\"Logo_de_la_ville\" class=\"fluid_logo_nav\"></a>
             <ul class=\"navbar\">
                 <a href=\"./accueil\" style=\"margin-right: 50px;\">Accueil</a>
                 <div style=\"margin-right: 50px;\">
@@ -295,16 +295,16 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
                 <a id=\"closeBtn\" href=\"#\" class=\"close\">×</a>
                 <ul>
                     <li class=\"li_nav\">
-                        <a href=\"\">Accueil</a>
-                        <a href=\"\">Profil</a>
-                        <a href=\"\">Événement</a>
-                        <a href=\"\">Panier</a>
-                        <a href=\"\">Déconnexion</a>
-                        <a href=\"\">Info pratique</a>
+                        <a href=\"./accueil\">Accueil</a>
+                        <a href=\"./profil\">Profil</a>
+                        <a href=\"./manifestation\">Événement</a>
+                        <a href=\"./panier\">Panier</a>
+                        <a href=\"./\">Déconnexion</a>
+                        <a href=\"./infoPratique\">Info pratique</a>
                     </li>
                 </ul>
             </nav>
-            <img src={{asset('media/Logo_ville.png')}} alt=\"Logo de la ville\" class=\"fluid_logo_nav\">
+            <img src={{asset('media/Logo_ville2.png')}} alt=\"Logo de la ville\" class=\"fluid_logo_nav\">
             <a href=\"#\" id=\"openBtn\">
             <span class=\"burger-icon\">
               <span></span>
@@ -317,14 +317,14 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         {% block content %}
         {% endblock %}
     <footer>
-        <img src={{asset('media/Logo_ville.png')}} alt=\"Logo de la ville\" class=\"fluid_logo_footer\">
-        <h5>1 Rue de l'Usine</h5>
+        <img src={{asset('media/Logo_ville2.png')}} alt=\"Logo de la ville\" class=\"fluid_logo_footer\">
+        <h5>2 rue Guillaume de Machault</h5>
         <br>
-        <h5>51420 Witry-lès-Reims</h5>
+        <h5>51110 Reims</h5>
         <br>
         <h5>03 26 97 07 25</h5>
         <br>
-        <h5>contact.culture@witry-les-reims.com</h5>
+        <h5>contact.culture@reims.com</h5>
         <br>
     </footer>
     </body>
