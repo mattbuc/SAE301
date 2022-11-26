@@ -4,6 +4,8 @@ namespace App\Form;
 
 use App\Entity\Manifestation;
 use App\Repository\ManifestationRepository;
+use Doctrine\ORM\Mapping\Entity;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -14,15 +16,13 @@ class ManifestationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('titre')
-            ->add('genre'/*, ChoiceType::class, [
-                'Choix' => [
-                    'Spectacle',
-                    'Théatre',
-                    'Concert'
-                ]
-    ]*/)
-
+            ->add('Titre')
+            ->add('Genre', EntityType::class, [
+                'class' => Manifestation::class,
+                'multiple' => false,
+                'expanded' => false,
+                'choice_label' => 'Genre',
+    ])
             ->add('Chercher', SubmitType::class)
         ;
     }
