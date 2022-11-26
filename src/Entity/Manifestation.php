@@ -20,9 +20,6 @@ class Manifestation
     #[ORM\Column(length: 255)]
     private ?string $affiche = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $genre = null;
-
     #[ORM\Column(length: 300)]
     private ?string $casting = null;
 
@@ -38,6 +35,9 @@ class Manifestation
     #[ORM\ManyToOne(inversedBy: 'manifestation')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Lieu $lieu = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $genre = null;
 
 
     public function getId(): ?int
@@ -65,18 +65,6 @@ class Manifestation
     public function setAffiche(string $affiche): self
     {
         $this->affiche = $affiche;
-
-        return $this;
-    }
-
-    public function getGenre(): ?string
-    {
-        return $this->genre;
-    }
-
-    public function setGenre(string $genre): self
-    {
-        $this->genre = $genre;
 
         return $this;
     }
@@ -141,6 +129,16 @@ class Manifestation
         return $this;
     }
 
+    public function getGenre(): ?string
+    {
+        return $this->genre;
+    }
 
+    public function setGenre(string $genre): self
+    {
+        $this->genre = $genre;
+
+        return $this;
+    }
 
 }

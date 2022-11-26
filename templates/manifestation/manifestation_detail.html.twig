@@ -71,7 +71,7 @@
             </article>
             <article class="info_reservation">
                 <div class="sous_info_reservation">
-                    <img src="./image/notice.png" alt="" class="notice_info">
+                    <img src={{ asset('media/notice.png')}} alt="" class="notice_info">
                     <h3>Info pratique</h3>
                 </div>
                 <p>Accés libre : </p>
@@ -83,11 +83,11 @@
                 <p>Organisateur : </p>
                 <p>site web : </p>
                 <br>
-                <p>tarif : </p>
+                <p>tarif : {{ Manifestation.getPrix }}€</p>
                 <br>
-                <p>Date : </p>
+                <p>Date : {{ Manifestation.getDate }}</p>
                 <br>
-                <p>Lieu : </p>
+                <p>Lieu : {{ Manifestation.getLieu.getLieu }}</p>
                 <br>
                 <div  class="info_reservation_bouton">
                     <button>Reserver</button>

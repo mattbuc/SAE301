@@ -140,7 +140,10 @@ class __TwigTemplate_0fe699bfa89d4dd2db09d4a2e5bfc6b1 extends Template
             </article>
             <article class=\"info_reservation\">
                 <div class=\"sous_info_reservation\">
-                    <img src=\"./image/notice.png\" alt=\"\" class=\"notice_info\">
+                    <img src=";
+        // line 74
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/notice.png"), "html", null, true);
+        echo " alt=\"\" class=\"notice_info\">
                     <h3>Info pratique</h3>
                 </div>
                 <p>Accés libre : </p>
@@ -152,11 +155,20 @@ class __TwigTemplate_0fe699bfa89d4dd2db09d4a2e5bfc6b1 extends Template
                 <p>Organisateur : </p>
                 <p>site web : </p>
                 <br>
-                <p>tarif : </p>
+                <p>tarif : ";
+        // line 86
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 86, $this->source); })()), "getPrix", [], "any", false, false, false, 86), "html", null, true);
+        echo "€</p>
                 <br>
-                <p>Date : </p>
+                <p>Date : ";
+        // line 88
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 88, $this->source); })()), "getDate", [], "any", false, false, false, 88), "html", null, true);
+        echo "</p>
                 <br>
-                <p>Lieu : </p>
+                <p>Lieu : ";
+        // line 90
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 90, $this->source); })()), "getLieu", [], "any", false, false, false, 90), "getLieu", [], "any", false, false, false, 90), "html", null, true);
+        echo "</p>
                 <br>
                 <div  class=\"info_reservation_bouton\">
                     <button>Reserver</button>
@@ -266,7 +278,7 @@ class __TwigTemplate_0fe699bfa89d4dd2db09d4a2e5bfc6b1 extends Template
 
     public function getDebugInfo()
     {
-        return array (  245 => 14,  235 => 13,  222 => 10,  212 => 9,  193 => 5,  169 => 98,  138 => 70,  134 => 69,  130 => 68,  125 => 67,  110 => 55,  72 => 20,  66 => 16,  64 => 13,  61 => 12,  59 => 9,  52 => 5,  46 => 1,);
+        return array (  257 => 14,  247 => 13,  234 => 10,  224 => 9,  205 => 5,  181 => 98,  170 => 90,  165 => 88,  160 => 86,  145 => 74,  138 => 70,  134 => 69,  130 => 68,  125 => 67,  110 => 55,  72 => 20,  66 => 16,  64 => 13,  61 => 12,  59 => 9,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -344,7 +356,7 @@ class __TwigTemplate_0fe699bfa89d4dd2db09d4a2e5bfc6b1 extends Template
             </article>
             <article class=\"info_reservation\">
                 <div class=\"sous_info_reservation\">
-                    <img src=\"./image/notice.png\" alt=\"\" class=\"notice_info\">
+                    <img src={{ asset('media/notice.png')}} alt=\"\" class=\"notice_info\">
                     <h3>Info pratique</h3>
                 </div>
                 <p>Accés libre : </p>
@@ -356,11 +368,11 @@ class __TwigTemplate_0fe699bfa89d4dd2db09d4a2e5bfc6b1 extends Template
                 <p>Organisateur : </p>
                 <p>site web : </p>
                 <br>
-                <p>tarif : </p>
+                <p>tarif : {{ Manifestation.getPrix }}€</p>
                 <br>
-                <p>Date : </p>
+                <p>Date : {{ Manifestation.getDate }}</p>
                 <br>
-                <p>Lieu : </p>
+                <p>Lieu : {{ Manifestation.getLieu.getLieu }}</p>
                 <br>
                 <div  class=\"info_reservation_bouton\">
                     <button>Reserver</button>

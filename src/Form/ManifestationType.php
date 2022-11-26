@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Lieu;
 use App\Entity\Manifestation;
 use App\Repository\ManifestationRepository;
 use Doctrine\ORM\Mapping\Entity;
@@ -17,12 +18,16 @@ class ManifestationType extends AbstractType
     {
         $builder
             ->add('Titre')
-            ->add('Genre', EntityType::class, [
+            /*->add('Genre', EntityType::class, [
                 'class' => Manifestation::class,
                 'multiple' => false,
                 'expanded' => false,
                 'choice_label' => 'Genre',
-    ])
+    ])*/
+            ->add('Lieu', EntityType::class, [
+                'class' => Lieu::class,
+                'choice_label' => 'Lieu',
+            ])
             ->add('Chercher', SubmitType::class)
         ;
     }

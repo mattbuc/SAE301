@@ -401,6 +401,39 @@ a:hover .notice{
     width: 10%;
 }
 
+/* recherche_reservation */
+
+#manifestation{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+
+#manifestation div:nth-child(3){
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+
+#manifestation input{
+    width: 80%;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: 5%;
+}
+
+#manifestation_Lieu{
+    border-radius: 40px;
+    padding: 5%;
+}
+
+#manifestation_Chercher{
+    padding: 5%;
+    border-radius: 20px;
+    background-color: #b37047;
+}
+
 /* footer */
 
 footer {
@@ -555,6 +588,39 @@ footer {
         height: 80%;
         background-color: #9c9c9c;
         margin-bottom: 5%;
+    }
+
+    /* recherche manifestation */
+
+    #manifestation{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 2%;
+    }
+
+    #manifestation div:nth-child(3){
+        margin-top: 0;
+    }
+
+    #manifestation input{
+        width: 80%;
+        height: 40px;
+        border-radius: 20px;
+        margin-bottom: 0%;
+    }
+
+    #manifestation_Lieu{
+        border-radius: 40px;
+    }
+
+    #manifestation_Chercher{
+        padding: 15%;
+        border-radius: 20px;
+        background-color: #b37047;
+        color: white;
+        align-items: center;
     }
 
 
