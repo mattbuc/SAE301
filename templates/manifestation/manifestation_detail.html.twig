@@ -12,6 +12,8 @@
     <!-- Fichiers js -->
     {% block javascripts %}
         <script src="{{ asset('assets/js/main.js') }}" defer></script>
+        <script src="{{ asset('assets/js/scriptpagearticles.js') }}" defer></script>
+        <script src="{{ asset('assets/js/scriptgeneral.js') }}" defer></script>
     {% endblock %}
 </head>
 <body>
@@ -91,7 +93,9 @@
                 <p>Lieu : {{ Manifestation.getLieu.getLieu }}</p>
                 <br>
                 <div  class="info_reservation_bouton">
-                    <button>Reserver</button>
+                    <input type="number" value="1" min="1" max="99" id="qte">
+                    <input type="hidden" id="id" value="101">
+                    <button id="ajout">Reserver</button>
                 </div>
             </article>
         </section>

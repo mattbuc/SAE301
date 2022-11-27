@@ -64,13 +64,13 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         ";
         // line 13
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 16
+        // line 17
         echo "    </head>
     <body>
     <header>
         <nav class=\"desktop_nav\">
             <a href=\"./accueil\" class=\"logo_lien\"><img src=";
-        // line 20
+        // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville2.png"), "html", null, true);
         echo " alt=\"Logo_de_la_ville\" class=\"fluid_logo_nav\"></a>
             <ul class=\"navbar\">
@@ -108,7 +108,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
                 </ul>
             </nav>
             <img src=";
-        // line 55
+        // line 56
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville2.png"), "html", null, true);
         echo " alt=\"Logo_de_la_ville\" class=\"fluid_logo_nav\">
             <a href=\"#\" id=\"openBtn\">
@@ -122,17 +122,17 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
     </header>
     <main>
     <h2>";
-        // line 66
+        // line 67
         $this->displayBlock('h2', $context, $blocks);
         echo "</h2>
         ";
-        // line 67
+        // line 68
         $this->displayBlock('content', $context, $blocks);
-        // line 70
+        // line 71
         echo "    </main>
     <footer>
         <img src=";
-        // line 72
+        // line 73
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville2.png"), "html", null, true);
         echo " alt=\"Logo_de_la_ville\" class=\"fluid_logo_footer\">
         <h5>2 rue Guillaume de Machault</h5>
@@ -211,6 +211,10 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/main.js"), "html", null, true);
         echo "\" defer></script>
+            <script src=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/scriptgeneral.js"), "html", null, true);
+        echo "\" defer></script>
         ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -220,7 +224,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
 
     }
 
-    // line 66
+    // line 67
     public function block_h2($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -239,7 +243,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
 
     }
 
-    // line 67
+    // line 68
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -249,7 +253,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 68
+        // line 69
         echo "
         ";
         
@@ -272,7 +276,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
 
     public function getDebugInfo()
     {
-        return array (  253 => 68,  243 => 67,  224 => 66,  211 => 14,  201 => 13,  188 => 10,  178 => 9,  159 => 5,  136 => 72,  132 => 70,  130 => 67,  126 => 66,  112 => 55,  74 => 20,  68 => 16,  66 => 13,  63 => 12,  61 => 9,  54 => 5,  48 => 1,);
+        return array (  257 => 69,  247 => 68,  228 => 67,  216 => 15,  211 => 14,  201 => 13,  188 => 10,  178 => 9,  159 => 5,  136 => 73,  132 => 71,  130 => 68,  126 => 67,  112 => 56,  74 => 21,  68 => 17,  66 => 13,  63 => 12,  61 => 9,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -291,6 +295,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         <!-- Fichiers js -->
         {% block javascripts %}
             <script src=\"{{ asset('assets/js/main.js') }}\" defer></script>
+            <script src=\"{{ asset('assets/js/scriptgeneral.js') }}\" defer></script>
         {% endblock %}
     </head>
     <body>
