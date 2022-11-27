@@ -109,7 +109,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
             <img src=";
         // line 55
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville2.png"), "html", null, true);
-        echo " alt=\"Logo de la ville\" class=\"fluid_logo_nav\">
+        echo " alt=\"Logo_de_la_ville\" class=\"fluid_logo_nav\">
             <a href=\"#\" id=\"openBtn\">
             <span class=\"burger-icon\">
               <span></span>
@@ -127,7 +127,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         <img src=";
         // line 68
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville2.png"), "html", null, true);
-        echo " alt=\"Logo de la ville\" class=\"fluid_logo_footer\">
+        echo " alt=\"Logo_de_la_ville\" class=\"fluid_logo_footer\">
         <h5>2 rue Guillaume de Machault</h5>
         <br>
         <h5>51110 Reims</h5>
@@ -304,7 +304,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
                     </li>
                 </ul>
             </nav>
-            <img src={{asset('media/Logo_ville2.png')}} alt=\"Logo de la ville\" class=\"fluid_logo_nav\">
+            <img src={{asset('media/Logo_ville2.png')}} alt=\"Logo_de_la_ville\" class=\"fluid_logo_nav\">
             <a href=\"#\" id=\"openBtn\">
             <span class=\"burger-icon\">
               <span></span>
@@ -317,7 +317,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         {% block content %}
         {% endblock %}
     <footer>
-        <img src={{asset('media/Logo_ville2.png')}} alt=\"Logo de la ville\" class=\"fluid_logo_footer\">
+        <img src={{asset('media/Logo_ville2.png')}} alt=\"Logo_de_la_ville\" class=\"fluid_logo_footer\">
         <h5>2 rue Guillaume de Machault</h5>
         <br>
         <h5>51110 Reims</h5>

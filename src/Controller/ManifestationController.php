@@ -5,19 +5,28 @@ namespace App\Controller;
 use App\Entity\Manifestation;
 use App\Form\ManifestationType;
 use App\Repository\ManifestationRepository;
+use http\Env\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\BrowserKit\Request;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 
 class ManifestationController extends AbstractController
 {
     #[Route('/manifestation', name: 'manifestation')]
-    public function allManifestation( ManifestationRepository $manifestationRepository )
+    public function allManifestation( ManifestationRepository $manifestationRepository, Request $request )
     {
 
-        $searchManifestation = new Manifestation();
-        $form = $this->createForm(ManifestationType::class, $searchManifestation);
+        $form = $this->createForm(ManifestationType::class);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $infoManifestation = $form->getData();
+
+            $manifestationForm = $manifestationRepository->searchManifestation($infoManifestation);
+
+            dd($manifestationForm);
+        }
 
         $manifestations = $manifestationRepository->findAll();
 

@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Lieu;
 use App\Entity\Manifestation;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -54,13 +55,17 @@ class ManifestationRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Manifestation
-//    {
-//        return $this->createQueryBuilder('m')
-//            ->andWhere('m.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+    public function searchManifestation($infoManifestation): ?Lieu
+    {
+        return $this->createQueryBuilder('m')
+            /*->Where('m.titre = :titre')
+            ->setParameter('titre', $infoManifestation)*/
+            ->leftJoin('m.lieu','lieu')
+            ->andWhere('lieu.lieu = :lieuName')
+            ->setParameter('lieuName', $infoManifestation)
+            ->orderBy('m.id', 'ASC')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 }
