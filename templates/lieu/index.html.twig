@@ -7,8 +7,7 @@
         {%for Lieu in Lieux %}
         <section class="lesLieux">
             <div class="lieu">
-                {# <img src={{ asset('media/') }}{{ Lieu.getAffiche}} alt="" class="lieu_image"> #}
-
+                <img src={{ asset("media/")}}{{ Lieu.getImage}} class="lieu_image">
                 <div class="lieu_details">
                     <p>{{ Lieu.getLieu }}</p>
                     <br>

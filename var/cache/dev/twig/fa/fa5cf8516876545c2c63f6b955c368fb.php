@@ -27,6 +27,7 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
+            'h2' => [$this, 'block_h2'],
             'content' => [$this, 'block_content'],
         ];
     }
@@ -87,6 +88,9 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
 
         // line 6
         echo "    ";
+        $this->displayBlock('h2', $context, $blocks);
+        // line 7
+        echo "    ";
         $this->displayBlock('content', $context, $blocks);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -96,6 +100,26 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
 
     }
 
+    // line 6
+    public function block_h2($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "h2"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "h2"));
+
+        echo "Les Événements";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 7
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -105,44 +129,44 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 7
+        // line 8
         echo "        ";
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 7, $this->source); })()), 'form');
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 8, $this->source); })()), 'form');
         echo "
         <section class=\"template_manifestation\">
         ";
-        // line 9
+        // line 10
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["Manifestations"]) || array_key_exists("Manifestations", $context) ? $context["Manifestations"] : (function () { throw new RuntimeError('Variable "Manifestations" does not exist.', 9, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["Manifestations"]) || array_key_exists("Manifestations", $context) ? $context["Manifestations"] : (function () { throw new RuntimeError('Variable "Manifestations" does not exist.', 10, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["Manifestation"]) {
-            // line 10
+            // line 11
             echo "                <div class=\"manifestation\">
                     <a href=./manifestation/";
-            // line 11
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "GetId", [], "any", false, false, false, 11), "html", null, true);
+            // line 12
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "GetId", [], "any", false, false, false, 12), "html", null, true);
             echo "><img src=";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/"), "html", null, true);
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getAffiche", [], "any", false, false, false, 11), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getAffiche", [], "any", false, false, false, 12), "html", null, true);
             echo " class=\"image_manifestation\"></a>
                     <img src=";
-            // line 12
+            // line 13
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/notice.png"), "html", null, true);
             echo " alt=\"icone_notice\" class=\"notice\">
                     <p>";
-            // line 13
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getDate", [], "any", false, false, false, 13), "html", null, true);
-            echo "</p>
-                    <p>";
             // line 14
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getTitre", [], "any", false, false, false, 14), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getDate", [], "any", false, false, false, 14), "html", null, true);
             echo "</p>
                     <p>";
             // line 15
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getDescription", [], "any", false, false, false, 15), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getTitre", [], "any", false, false, false, 15), "html", null, true);
             echo "</p>
                     <p>";
             // line 16
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getLieu", [], "any", false, false, false, 16), "getLieu", [], "any", false, false, false, 16), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getDescription", [], "any", false, false, false, 16), "html", null, true);
+            echo "</p>
+                    <p>";
+            // line 17
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["Manifestation"], "getLieu", [], "any", false, false, false, 17), "getLieu", [], "any", false, false, false, 17), "html", null, true);
             echo "</p>
                 </div>
             ";
@@ -150,7 +174,7 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['Manifestation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 19
+        // line 20
         echo "        </section>
     ";
         
@@ -173,7 +197,7 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
 
     public function getDebugInfo()
     {
-        return array (  154 => 19,  145 => 16,  141 => 15,  137 => 14,  133 => 13,  129 => 12,  122 => 11,  119 => 10,  115 => 9,  109 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  178 => 20,  169 => 17,  165 => 16,  161 => 15,  157 => 14,  153 => 13,  146 => 12,  143 => 11,  139 => 10,  133 => 8,  123 => 7,  104 => 6,  93 => 7,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -183,6 +207,7 @@ class __TwigTemplate_3813e96492df795eebcffe82078200cc extends Template
 {% block title %}Les manifestations de la ville.{% endblock %}
 
 {% block body %}
+    {% block h2 %}Les Événements{% endblock %}
     {% block content %}
         {{ form(form) }}
         <section class=\"template_manifestation\">

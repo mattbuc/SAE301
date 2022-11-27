@@ -62,11 +62,12 @@
         </a>
     </div>
 </header>
+        <h2>Détails de l'événement</h2>
         <section class="reservation">
             <article class="info_manif">
                 <img src={{ asset('media/') }}{{ Manifestation.getAffiche }} class="affiche_reservation">
-                <p>{{ Manifestation.GetGenre }}</p>
-                <p>{{ Manifestation.GetTitre }}</p>
+                <h4>Événement : {{ Manifestation.GetGenre }}</h4>
+                <h3>{{ Manifestation.GetTitre }}</h3>
                 <p>{{ Manifestation.getDescription }}</p>
             </article>
             <article class="info_reservation">

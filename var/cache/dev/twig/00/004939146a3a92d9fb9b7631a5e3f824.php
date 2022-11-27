@@ -110,11 +110,15 @@ class __TwigTemplate_5e2109e69b59c5e85aaf48e65e4c7b98 extends Template
             <article class=\"premier_article\">
                 <img src=";
         // line 9
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/bigflooli.jpg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/tresor.png"), "html", null, true);
         echo " alt=\"\" class=\"image_accueil\">
             </article>
             <article class=\"premier_article\">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas libero porro fuga voluptates laudantium ea, ullam dignissimos obcaecati doloribus velit non aperiam dolorem quidem placeat. Similique, beatae saepe repellendus reiciendis vero nisi delectus inventore nobis dolore tempora facere provident optio eius quas recusandae facilis sed temporibus aliquam accusamus ipsa. Sequi corrupti quasi animi beatae perferendis, adipisci dolore sit possimus fugiat praesentium? Nam officia quis hic animi quo velit praesentium facilis, dolore perspiciatis adipisci quisquam at illum autem unde commodi tempore temporibus nulla. Nihil ab voluptates minima aliquid, blanditiis delectus! Odit, omnis eos nobis veniam reiciendis ipsum voluptatem aliquid quidem sit sunt quae id, ex, ipsam ducimus. Nobis ipsa iure illo corporis modi inventore sed temporibus vel dolorum, similique magnam nulla ipsam soluta error beatae distinctio dolore? Nobis, et laboriosam? Perspiciatis repellat accusantium fugit optio dolorum! Nostrum eos magni quis perferendis harum aspernatur deserunt neque obcaecati possimus, doloremque id amet non aliquam, officiis autem rem dolorum nemo minima quasi architecto fuga fugit repellendus. Reiciendis vel beatae optio saepe totam ullam, commodi, velit accusantium voluptatem eveniet quod delectus id minima quaerat officiis rem enim mollitia minus assumenda. Fugit enim accusamus expedita esse totam aspernatur cumque! Tempora maxime iure sit! Animi incidunt alias reiciendis ratione eaque molestiae dolorem maxime ut.</p>
+                <h3>Le Trésor</h3>
+                <br>
+                <p>Le Trésor est le point info culture de la ville de Reims où chacun peut se renseigner sur l’actualité culturelle et bénéficier d’une billetterie commune aux grandes structures culturelles rémoises.
+                    <br>
+                    Des expositions temporaires sont à découvrir dans le lieu.</p>
             </article>
         </section>
         <section class=\"accueil2\">
@@ -124,7 +128,7 @@ class __TwigTemplate_5e2109e69b59c5e85aaf48e65e4c7b98 extends Template
             <article class=\"troisieme_article\">
                 <p>Adresse : 2 rue Guillaume de Machault à Reims</p>
                 <br>
-                <p>Contact : 03 26 777 776</p>
+                <p>Contact : 03 26 77 76</p>
                 <br>
                 <p>Ouverture : les mardis et vendredis de 13h à 17h et le mercredi de 10h à 17h.</p>
             </article>
@@ -163,10 +167,14 @@ class __TwigTemplate_5e2109e69b59c5e85aaf48e65e4c7b98 extends Template
     {% block content %}
         <section class=\"accueil1\">
             <article class=\"premier_article\">
-                <img src={{ asset('media/bigflooli.jpg')}} alt=\"\" class=\"image_accueil\">
+                <img src={{ asset('media/tresor.png')}} alt=\"\" class=\"image_accueil\">
             </article>
             <article class=\"premier_article\">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas libero porro fuga voluptates laudantium ea, ullam dignissimos obcaecati doloribus velit non aperiam dolorem quidem placeat. Similique, beatae saepe repellendus reiciendis vero nisi delectus inventore nobis dolore tempora facere provident optio eius quas recusandae facilis sed temporibus aliquam accusamus ipsa. Sequi corrupti quasi animi beatae perferendis, adipisci dolore sit possimus fugiat praesentium? Nam officia quis hic animi quo velit praesentium facilis, dolore perspiciatis adipisci quisquam at illum autem unde commodi tempore temporibus nulla. Nihil ab voluptates minima aliquid, blanditiis delectus! Odit, omnis eos nobis veniam reiciendis ipsum voluptatem aliquid quidem sit sunt quae id, ex, ipsam ducimus. Nobis ipsa iure illo corporis modi inventore sed temporibus vel dolorum, similique magnam nulla ipsam soluta error beatae distinctio dolore? Nobis, et laboriosam? Perspiciatis repellat accusantium fugit optio dolorum! Nostrum eos magni quis perferendis harum aspernatur deserunt neque obcaecati possimus, doloremque id amet non aliquam, officiis autem rem dolorum nemo minima quasi architecto fuga fugit repellendus. Reiciendis vel beatae optio saepe totam ullam, commodi, velit accusantium voluptatem eveniet quod delectus id minima quaerat officiis rem enim mollitia minus assumenda. Fugit enim accusamus expedita esse totam aspernatur cumque! Tempora maxime iure sit! Animi incidunt alias reiciendis ratione eaque molestiae dolorem maxime ut.</p>
+                <h3>Le Trésor</h3>
+                <br>
+                <p>Le Trésor est le point info culture de la ville de Reims où chacun peut se renseigner sur l’actualité culturelle et bénéficier d’une billetterie commune aux grandes structures culturelles rémoises.
+                    <br>
+                    Des expositions temporaires sont à découvrir dans le lieu.</p>
             </article>
         </section>
         <section class=\"accueil2\">
@@ -176,7 +184,7 @@ class __TwigTemplate_5e2109e69b59c5e85aaf48e65e4c7b98 extends Template
             <article class=\"troisieme_article\">
                 <p>Adresse : 2 rue Guillaume de Machault à Reims</p>
                 <br>
-                <p>Contact : 03 26 777 776</p>
+                <p>Contact : 03 26 77 76</p>
                 <br>
                 <p>Ouverture : les mardis et vendredis de 13h à 17h et le mercredi de 10h à 17h.</p>
             </article>

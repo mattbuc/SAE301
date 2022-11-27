@@ -118,30 +118,31 @@ class __TwigTemplate_0fe699bfa89d4dd2db09d4a2e5bfc6b1 extends Template
         </a>
     </div>
 </header>
+        <h2>Détails de l'événement</h2>
         <section class=\"reservation\">
             <article class=\"info_manif\">
                 <img src=";
-        // line 67
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/"), "html", null, true);
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 67, $this->source); })()), "getAffiche", [], "any", false, false, false, 67), "html", null, true);
-        echo " class=\"affiche_reservation\">
-                <p>";
         // line 68
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 68, $this->source); })()), "GetGenre", [], "any", false, false, false, 68), "html", null, true);
-        echo "</p>
-                <p>";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/"), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 68, $this->source); })()), "getAffiche", [], "any", false, false, false, 68), "html", null, true);
+        echo " class=\"affiche_reservation\">
+                <h4>Événement : ";
         // line 69
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 69, $this->source); })()), "GetTitre", [], "any", false, false, false, 69), "html", null, true);
-        echo "</p>
-                <p>";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 69, $this->source); })()), "GetGenre", [], "any", false, false, false, 69), "html", null, true);
+        echo "</h4>
+                <h3>";
         // line 70
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 70, $this->source); })()), "getDescription", [], "any", false, false, false, 70), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 70, $this->source); })()), "GetTitre", [], "any", false, false, false, 70), "html", null, true);
+        echo "</h3>
+                <p>";
+        // line 71
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 71, $this->source); })()), "getDescription", [], "any", false, false, false, 71), "html", null, true);
         echo "</p>
             </article>
             <article class=\"info_reservation\">
                 <div class=\"sous_info_reservation\">
                     <img src=";
-        // line 74
+        // line 75
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/notice.png"), "html", null, true);
         echo " alt=\"\" class=\"notice_info\">
                     <h3>Info pratique</h3>
@@ -156,18 +157,18 @@ class __TwigTemplate_0fe699bfa89d4dd2db09d4a2e5bfc6b1 extends Template
                 <p>site web : </p>
                 <br>
                 <p>tarif : ";
-        // line 86
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 86, $this->source); })()), "getPrix", [], "any", false, false, false, 86), "html", null, true);
+        // line 87
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 87, $this->source); })()), "getPrix", [], "any", false, false, false, 87), "html", null, true);
         echo "€</p>
                 <br>
                 <p>Date : ";
-        // line 88
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 88, $this->source); })()), "getDate", [], "any", false, false, false, 88), "html", null, true);
+        // line 89
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 89, $this->source); })()), "getDate", [], "any", false, false, false, 89), "html", null, true);
         echo "</p>
                 <br>
                 <p>Lieu : ";
-        // line 90
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 90, $this->source); })()), "getLieu", [], "any", false, false, false, 90), "getLieu", [], "any", false, false, false, 90), "html", null, true);
+        // line 91
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["Manifestation"]) || array_key_exists("Manifestation", $context) ? $context["Manifestation"] : (function () { throw new RuntimeError('Variable "Manifestation" does not exist.', 91, $this->source); })()), "getLieu", [], "any", false, false, false, 91), "getLieu", [], "any", false, false, false, 91), "html", null, true);
         echo "</p>
                 <br>
                 <div  class=\"info_reservation_bouton\">
@@ -177,7 +178,7 @@ class __TwigTemplate_0fe699bfa89d4dd2db09d4a2e5bfc6b1 extends Template
         </section>
 <footer>
     <img src=";
-        // line 98
+        // line 99
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville2.png"), "html", null, true);
         echo " alt=\"Logo_de_la_ville\" class=\"fluid_logo_footer\">
     <h5>2 rue Guillaume de Machault</h5>
@@ -278,7 +279,7 @@ class __TwigTemplate_0fe699bfa89d4dd2db09d4a2e5bfc6b1 extends Template
 
     public function getDebugInfo()
     {
-        return array (  257 => 14,  247 => 13,  234 => 10,  224 => 9,  205 => 5,  181 => 98,  170 => 90,  165 => 88,  160 => 86,  145 => 74,  138 => 70,  134 => 69,  130 => 68,  125 => 67,  110 => 55,  72 => 20,  66 => 16,  64 => 13,  61 => 12,  59 => 9,  52 => 5,  46 => 1,);
+        return array (  258 => 14,  248 => 13,  235 => 10,  225 => 9,  206 => 5,  182 => 99,  171 => 91,  166 => 89,  161 => 87,  146 => 75,  139 => 71,  135 => 70,  131 => 69,  126 => 68,  110 => 55,  72 => 20,  66 => 16,  64 => 13,  61 => 12,  59 => 9,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -347,11 +348,12 @@ class __TwigTemplate_0fe699bfa89d4dd2db09d4a2e5bfc6b1 extends Template
         </a>
     </div>
 </header>
+        <h2>Détails de l'événement</h2>
         <section class=\"reservation\">
             <article class=\"info_manif\">
                 <img src={{ asset('media/') }}{{ Manifestation.getAffiche }} class=\"affiche_reservation\">
-                <p>{{ Manifestation.GetGenre }}</p>
-                <p>{{ Manifestation.GetTitre }}</p>
+                <h4>Événement : {{ Manifestation.GetGenre }}</h4>
+                <h3>{{ Manifestation.GetTitre }}</h3>
                 <p>{{ Manifestation.getDescription }}</p>
             </article>
             <article class=\"info_reservation\">

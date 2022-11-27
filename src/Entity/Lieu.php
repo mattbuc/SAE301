@@ -27,6 +27,9 @@ class Lieu
     #[ORM\OneToMany(mappedBy: 'lieu', targetEntity: Manifestation::class)]
     private Collection $manifestation;
 
+    #[ORM\Column(length: 255)]
+    private ?string $image = null;
+
     public function __construct()
     {
         $this->manifestation = new ArrayCollection();
@@ -99,6 +102,18 @@ class Lieu
                 $manifestation->setLieu(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }

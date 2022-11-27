@@ -151,7 +151,15 @@ ul.navbar li{
 
 /* main */
 
+h2{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-decoration: underline;
+    margin-left: 10%;
+}
+
 /* Accueil */
+
 
 .accueil1{
     display: flex;
@@ -169,13 +177,13 @@ ul.navbar li{
 }
 
 .premier_article{
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     display: flex;
     flex-direction: column;
-    background-color: #9c9c9c;
     width: 80%;
     height: 100%;
+    letter-spacing: 2px;
 }
 
 .deuxieme_article{
@@ -188,6 +196,7 @@ ul.navbar li{
 
 .troisieme_article{
     padding: 5%;
+    font-weight: bold;
 }
 
 .image_accueil{
@@ -324,9 +333,10 @@ a:hover .notice{
 
 .lieu{
     width: 80%;
-    background-color: #9c9c9c;
+    border: 3px solid black;
+    box-shadow: #987018 15px 15px 30px;
     margin-top: 2%;
-    margin-bottom: 2%;
+    margin-bottom: 4%;
     border-radius: 20px;
 }
 
@@ -334,14 +344,16 @@ a:hover .notice{
     width: 100%;
     height: 400px;
     object-fit: cover;
-    object-position: 80% 0%;
+    object-position: 50% 40%;
     border-radius: 20px 20px 0px 0px;
+    margin-bottom: 2%;
 }
 
 .lieu_details{
     text-align: center;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
     padding: 2%;
+    font-weight: bold;
 }
 
 /* Reservation */
@@ -356,19 +368,32 @@ a:hover .notice{
 .info_manif{
     width: 80%;
     height: 100%;
-    background-color: #9c9c9c;
     margin-bottom: 5%;
+    border-radius: 20px;
+    box-shadow: 15px 15px 30px;
+    letter-spacing: 1px;
 }
 
 .info_reservation{
     width: 80%;
     height: 100%;
-    background-color: #9c9c9c;
     margin-bottom: 5%;
+    border-radius: 20px;
+    box-shadow: 15px 15px 30px;
+    font-weight: bold;
 }
+
 
 .info_reservation p{
     padding: 5%;
+}
+
+.info_manif h3 {
+    padding: 2% 5% 2% 5%;
+}
+
+.info_manif h4 {
+    padding: 2% 5% 2% 5%;
 }
 
 .info_reservation button{
@@ -434,6 +459,57 @@ a:hover .notice{
     background-color: #b37047;
 }
 
+/* achat */
+
+.achat {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.contenu_achat{
+    width: 80%;
+    height: 100%;
+    background-color: #9c9c9c;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.image_achat{
+    width: 80%;
+}
+
+/* Info pratique */
+
+.info_pratique{
+    margin: 10%;
+    border: #111 2px solid;
+    border-radius: 20px;
+    box-shadow: #987018 15px 15px 30px;
+    padding: 2%;
+}
+
+.info_pratique p{
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.info_pratique h1{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.info_pratique h5{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #987018;
+}
+
 /* footer */
 
 footer {
@@ -484,6 +560,7 @@ footer {
 
     /* main */
 
+
     /* Accueil */
 
     .accueil1{
@@ -499,7 +576,6 @@ footer {
         margin-top: 5%;
         margin-bottom: 5%;
         display: flex;
-        background-color: #9c9c9c;
         width: 35%;
         height: 100%;
     }
@@ -569,6 +645,8 @@ footer {
 
     .reservation{
         margin-top: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -576,9 +654,8 @@ footer {
     }
 
     .info_manif{
-        width: 50%;
+        width: 40%;
         height: 100%;
-        background-color: #9c9c9c;
         margin-bottom: 5%;
     }
 
@@ -586,9 +663,9 @@ footer {
         top: 0;
         width: 20%;
         height: 80%;
-        background-color: #9c9c9c;
         margin-bottom: 5%;
     }
+
 
     /* recherche manifestation */
 
@@ -621,6 +698,29 @@ footer {
         background-color: #b37047;
         color: white;
         align-items: center;
+    }
+
+    /* achat */
+
+    .achat {
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .contenu_achat{
+        display: flex;
+        width: 80%;
+        height: 100%;
+        background-color: #9c9c9c;
+        align-items: center;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .image_achat{
+        width: 50%;
     }
 
 

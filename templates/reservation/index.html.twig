@@ -1,20 +1,26 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ReservationController!{% endblock %}
+{% block title %}Réservation{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    {% block h2 %}Réservation{% endblock %}
+    {% block content %}
+        <section class="achat">
+            <article class="contenu_achat">
+                <img src="./image/bigflooli.jpg.jpg" alt="" class="image_achat">
+                <h3>Spectacle</h3>
+                <br>
+                <h4>Concert</h4>
+                <br>
+                <div>
+                    <span id="article">vis bois</span> - <span id="prix">4</span>€
+                    <input type="number" value="1" min="1" max="99" id="qte">
+                    <input type="hidden" id="id" value="101">
+                    <button id="ajout">ajouter au panier</button>
+                </div>
+                <br>
+            </article>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/SAE301/src/Controller/ReservationController.php'|file_link(0) }}">src/Controller/ReservationController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/SAE301/templates/reservation/index.html.twig'|file_link(0) }}">templates/reservation/index.html.twig</a></code></li>
-    </ul>
-</div>
+        </section>
+        {% endblock %}
 {% endblock %}

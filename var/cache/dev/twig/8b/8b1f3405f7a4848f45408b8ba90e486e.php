@@ -30,6 +30,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
             'title' => [$this, 'block_title'],
             'stylesheets' => [$this, 'block_stylesheets'],
             'javascripts' => [$this, 'block_javascripts'],
+            'h2' => [$this, 'block_h2'],
             'content' => [$this, 'block_content'],
         ];
     }
@@ -119,13 +120,19 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
             </a>
         </div>
     </header>
+    <main>
+    <h2>";
+        // line 66
+        $this->displayBlock('h2', $context, $blocks);
+        echo "</h2>
         ";
-        // line 65
-        $this->displayBlock('content', $context, $blocks);
         // line 67
-        echo "    <footer>
+        $this->displayBlock('content', $context, $blocks);
+        // line 70
+        echo "    </main>
+    <footer>
         <img src=";
-        // line 68
+        // line 72
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/Logo_ville2.png"), "html", null, true);
         echo " alt=\"Logo_de_la_ville\" class=\"fluid_logo_footer\">
         <h5>2 rue Guillaume de Machault</h5>
@@ -213,7 +220,26 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
 
     }
 
-    // line 65
+    // line 66
+    public function block_h2($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "h2"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "h2"));
+
+        echo "Accueil";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 67
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -223,8 +249,9 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 66
-        echo "        ";
+        // line 68
+        echo "
+        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -245,7 +272,7 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
 
     public function getDebugInfo()
     {
-        return array (  227 => 66,  217 => 65,  204 => 14,  194 => 13,  181 => 10,  171 => 9,  152 => 5,  129 => 68,  126 => 67,  124 => 65,  111 => 55,  73 => 20,  67 => 16,  65 => 13,  62 => 12,  60 => 9,  53 => 5,  47 => 1,);
+        return array (  253 => 68,  243 => 67,  224 => 66,  211 => 14,  201 => 13,  188 => 10,  178 => 9,  159 => 5,  136 => 72,  132 => 70,  130 => 67,  126 => 66,  112 => 55,  74 => 20,  68 => 16,  66 => 13,  63 => 12,  61 => 9,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -314,8 +341,12 @@ class __TwigTemplate_6bc9a9867b96688b2dc37173756fa065 extends Template
             </a>
         </div>
     </header>
+    <main>
+    <h2>{% block h2 %}Accueil{% endblock %}</h2>
         {% block content %}
+
         {% endblock %}
+    </main>
     <footer>
         <img src={{asset('media/Logo_ville2.png')}} alt=\"Logo_de_la_ville\" class=\"fluid_logo_footer\">
         <h5>2 rue Guillaume de Machault</h5>

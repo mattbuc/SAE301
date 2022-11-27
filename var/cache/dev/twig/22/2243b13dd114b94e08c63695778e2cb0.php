@@ -27,6 +27,7 @@ class __TwigTemplate_ce830c6ec324a7a088bd6623aa9a5de6 extends Template
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
+            'h2' => [$this, 'block_h2'],
             'content' => [$this, 'block_content'],
         ];
     }
@@ -87,6 +88,9 @@ class __TwigTemplate_ce830c6ec324a7a088bd6623aa9a5de6 extends Template
 
         // line 6
         echo "    ";
+        $this->displayBlock('h2', $context, $blocks);
+        // line 7
+        echo "    ";
         $this->displayBlock('content', $context, $blocks);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -96,6 +100,26 @@ class __TwigTemplate_ce830c6ec324a7a088bd6623aa9a5de6 extends Template
 
     }
 
+    // line 6
+    public function block_h2($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "h2"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "h2"));
+
+        echo "Panier";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 7
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -105,7 +129,7 @@ class __TwigTemplate_ce830c6ec324a7a088bd6623aa9a5de6 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 7
+        // line 8
         echo "        <table>
             <thead>
             <tr>
@@ -130,7 +154,7 @@ class __TwigTemplate_ce830c6ec324a7a088bd6623aa9a5de6 extends Template
         <hr>
 
         <script src=";
-        // line 30
+        // line 31
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/scriptpanier.js"), "html", null, true);
         echo "></script>
         ";
@@ -154,7 +178,7 @@ class __TwigTemplate_ce830c6ec324a7a088bd6623aa9a5de6 extends Template
 
     public function getDebugInfo()
     {
-        return array (  134 => 30,  109 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  158 => 31,  133 => 8,  123 => 7,  104 => 6,  93 => 7,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -164,6 +188,7 @@ class __TwigTemplate_ce830c6ec324a7a088bd6623aa9a5de6 extends Template
 {% block title %}Hello PanierController!{% endblock %}
 
 {% block body %}
+    {% block h2 %}Panier{% endblock %}
     {% block content %}
         <table>
             <thead>

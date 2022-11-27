@@ -113,23 +113,25 @@ class __TwigTemplate_0700fd0f92834a063a43c7a27290f0c9 extends Template
             // line 8
             echo "        <section class=\"lesLieux\">
             <div class=\"lieu\">
-                ";
-            // line 11
-            echo "
+                <img src=";
+            // line 10
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("media/"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Lieu"], "getImage", [], "any", false, false, false, 10), "html", null, true);
+            echo " class=\"lieu_image\">
                 <div class=\"lieu_details\">
                     <p>";
-            // line 13
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Lieu"], "getLieu", [], "any", false, false, false, 13), "html", null, true);
+            // line 12
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Lieu"], "getLieu", [], "any", false, false, false, 12), "html", null, true);
             echo "</p>
                     <br>
                     <p>La capacité de l'établissement est de : ";
-            // line 15
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Lieu"], "getCapacite", [], "any", false, false, false, 15), "html", null, true);
+            // line 14
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Lieu"], "getCapacite", [], "any", false, false, false, 14), "html", null, true);
             echo " places</p>
                     <br>
                     <p>L'adresse est au : ";
-            // line 17
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Lieu"], "getAdresse", [], "any", false, false, false, 17), "html", null, true);
+            // line 16
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Lieu"], "getAdresse", [], "any", false, false, false, 16), "html", null, true);
             echo " </p>
                 </div>
             </div>
@@ -139,7 +141,7 @@ class __TwigTemplate_0700fd0f92834a063a43c7a27290f0c9 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['Lieu'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 22
+        // line 21
         echo "    ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -161,7 +163,7 @@ class __TwigTemplate_0700fd0f92834a063a43c7a27290f0c9 extends Template
 
     public function getDebugInfo()
     {
-        return array (  143 => 22,  132 => 17,  127 => 15,  122 => 13,  118 => 11,  114 => 8,  109 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  145 => 21,  134 => 16,  129 => 14,  124 => 12,  118 => 10,  114 => 8,  109 => 7,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -175,8 +177,7 @@ class __TwigTemplate_0700fd0f92834a063a43c7a27290f0c9 extends Template
         {%for Lieu in Lieux %}
         <section class=\"lesLieux\">
             <div class=\"lieu\">
-                {# <img src={{ asset('media/') }}{{ Lieu.getAffiche}} alt=\"\" class=\"lieu_image\"> #}
-
+                <img src={{ asset(\"media/\")}}{{ Lieu.getImage}} class=\"lieu_image\">
                 <div class=\"lieu_details\">
                     <p>{{ Lieu.getLieu }}</p>
                     <br>

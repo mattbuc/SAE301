@@ -62,8 +62,12 @@
             </a>
         </div>
     </header>
+    <main>
+    <h2>{% block h2 %}Accueil{% endblock %}</h2>
         {% block content %}
+
         {% endblock %}
+    </main>
     <footer>
         <img src={{asset('media/Logo_ville2.png')}} alt="Logo_de_la_ville" class="fluid_logo_footer">
         <h5>2 rue Guillaume de Machault</h5>

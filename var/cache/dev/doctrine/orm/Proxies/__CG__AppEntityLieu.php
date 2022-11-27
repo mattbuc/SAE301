@@ -67,10 +67,10 @@ class Lieu extends \App\Entity\Lieu implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'lieu', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'adresse', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'capacite', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'manifestation'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'lieu', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'adresse', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'capacite', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'manifestation', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'image'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'lieu', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'adresse', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'capacite', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'manifestation'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'lieu', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'adresse', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'capacite', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'manifestation', '' . "\0" . 'App\\Entity\\Lieu' . "\0" . 'image'];
     }
 
     /**
@@ -289,6 +289,28 @@ class Lieu extends \App\Entity\Lieu implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeManifestation', [$manifestation]);
 
         return parent::removeManifestation($manifestation);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getImage(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getImage', []);
+
+        return parent::getImage();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setImage(string $image): \App\Entity\Lieu
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setImage', [$image]);
+
+        return parent::setImage($image);
     }
 
 }
