@@ -2484,14 +2484,6 @@
         <argument>-100</argument>
       </call>
       <call method="addListener">
-        <argument>Symfony\Component\Messenger\Event\WorkerRunningEvent</argument>
-        <argument type="collection">
-          <argument type="service_closure" id="messenger.listener.dispatch_pcntl_signal_listener"/>
-          <argument>onWorkerRunning</argument>
-        </argument>
-        <argument>100</argument>
-      </call>
-      <call method="addListener">
         <argument>Symfony\Component\Messenger\Event\WorkerStartedEvent</argument>
         <argument type="collection">
           <argument type="service_closure" id="messenger.listener.stop_worker_on_restart_signal_listener"/>
@@ -2506,14 +2498,6 @@
           <argument>onWorkerRunning</argument>
         </argument>
         <argument>0</argument>
-      </call>
-      <call method="addListener">
-        <argument>Symfony\Component\Messenger\Event\WorkerStartedEvent</argument>
-        <argument type="collection">
-          <argument type="service_closure" id="messenger.listener.stop_worker_on_sigterm_signal_listener"/>
-          <argument>onWorkerStarted</argument>
-        </argument>
-        <argument>100</argument>
       </call>
       <call method="addListener">
         <argument>Symfony\Component\Messenger\Event\WorkerMessageFailedEvent</argument>
@@ -5621,7 +5605,7 @@
     <service id="security.logout.listener.default.main" class="Symfony\Component\Security\Http\EventListener\DefaultLogoutListener">
       <tag name="kernel.event_subscriber" dispatcher="security.event_dispatcher.main"/>
       <argument type="service" id="security.http_utils"/>
-      <argument>/</argument>
+      <argument>app_accueil</argument>
     </service>
     <service id="security.logout.listener.session.main" class="Symfony\Component\Security\Http\EventListener\SessionLogoutListener">
       <tag name="kernel.event_subscriber" dispatcher="security.event_dispatcher.main"/>

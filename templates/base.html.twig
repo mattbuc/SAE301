@@ -32,9 +32,14 @@
                 <div>
                     <li id="lien2">Compte</li>
                     <ul class="boite invisible" id="liens2">
+                        {% if app.user %}
                         <li class="sous-boite"><a href="./profil/">Profil</a></li>
                         <li class="sous-boite"><a href="./panier/">Panier</a></li>
-                        <li class="sous-boite"><a href="">Déconnexion</a></li>
+                        <li class="sous-boite"><a href="./logout">Déconnexion</a></li>
+
+                        {% else %}
+                        <li class="sous-boite"><a href="./security">Connexion</a></li>
+                        {% endif %}
                     </ul>
                 </div>
                 </div>
@@ -44,11 +49,18 @@
                 <a id="closeBtn" href="#" class="close">×</a>
                 <ul>
                     <li class="li_nav">
+                        {% if app.user %}
                         <a href="./accueil">Accueil</a>
                         <a href="./profil">Profil</a>
                         <a href="./manifestation">Événement</a>
                         <a href="./panier">Panier</a>
-                        <a href="./">Déconnexion</a>
+                        <a href="./logout">Déconnexion</a>
+                        <a href="./infoPratique">Info pratique</a>
+                        {% endif %}
+                        <a href="./accueil">Accueil</a>
+                        <a href="./manifestation">Événement</a>
+                        <a href="./panier">Panier</a>
+                        <a href="./security">Connexion</a>
                         <a href="./infoPratique">Info pratique</a>
                     </li>
                 </ul>

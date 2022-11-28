@@ -1,8 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Log in!{% endblock %}
+{% block h2 %}Connexion{% endblock %}
 
 {% block body %}
+    {% block content %}
+
 <form method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -39,4 +42,5 @@
         Sign in
     </button>
 </form>
+        {% endblock %}
 {% endblock %}
