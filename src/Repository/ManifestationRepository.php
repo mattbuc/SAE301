@@ -60,7 +60,7 @@ class ManifestationRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('m')
             /*->Where('m.titre = :titre')
             ->setParameter('titre', $infoManifestation)*/
-            ->leftJoin('m.lieu','lieu')
+            ->innerJoin('m.lieu','lieu')
             ->andWhere('lieu.lieu = :lieuName')
             ->setParameter('lieuName', $infoManifestation)
             ->orderBy('m.id', 'ASC')
