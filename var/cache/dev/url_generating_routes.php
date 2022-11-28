@@ -21,11 +21,11 @@ return [
     'app_finalisation' => [[], ['_controller' => 'App\\Controller\\FinalisationController::index'], [], [['text', '/finalisation']], [], [], []],
     'app_infopratique' => [[], ['_controller' => 'App\\Controller\\InfoPratiqueController::index'], [], [['text', '/infoPratique']], [], [], []],
     'app_lieu' => [[], ['_controller' => 'App\\Controller\\LieuController::manifestation'], [], [['text', '/lieu']], [], [], []],
-    'app_login' => [[], ['_controller' => 'App\\Controller\\LoginController::index'], [], [['text', '/login']], [], [], []],
     'manifestation' => [[], ['_controller' => 'App\\Controller\\ManifestationController::allManifestation'], [], [['text', '/manifestation']], [], [], []],
     'manifestation_detail' => [['id'], ['_controller' => 'App\\Controller\\ManifestationController::afficherManifestation'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/manifestation']], [], [], []],
-    'app_new_user' => [[], ['_controller' => 'App\\Controller\\NewUserController::index'], [], [['text', '/new/user']], [], [], []],
     'app_panier' => [[], ['_controller' => 'App\\Controller\\PanierController::index'], [], [['text', '/panier']], [], [], []],
     'app_profil' => [[], ['_controller' => 'App\\Controller\\ProfilController::index'], [], [['text', '/profil']], [], [], []],
     'app_reservation' => [[], ['_controller' => 'App\\Controller\\ReservationController::index'], [], [['text', '/reservation']], [], [], []],
+    'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
+    'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
 ];

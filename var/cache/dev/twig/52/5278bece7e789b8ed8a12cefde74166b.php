@@ -110,6 +110,7 @@ class __TwigTemplate_417515e83a2ce06e53b2571427e8ca32 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "h2"));
 
+        echo "Réservation";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -167,7 +168,7 @@ class __TwigTemplate_417515e83a2ce06e53b2571427e8ca32 extends Template
 
     public function getDebugInfo()
     {
-        return array (  132 => 8,  122 => 7,  104 => 6,  93 => 7,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
+        return array (  133 => 8,  123 => 7,  104 => 6,  93 => 7,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -177,7 +178,7 @@ class __TwigTemplate_417515e83a2ce06e53b2571427e8ca32 extends Template
 {% block title %}Réservation{% endblock %}
 
 {% block body %}
-    {% block h2 %}{% endblock %}
+    {% block h2 %}Réservation{% endblock %}
     {% block content %}
         <section class=\"achat\">
             <article class=\"contenu_achat\">

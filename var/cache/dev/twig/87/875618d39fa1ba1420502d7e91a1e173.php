@@ -27,6 +27,7 @@ class __TwigTemplate_0a639d354daded6e33b75c31b1da5134 extends Template
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
+            'h2' => [$this, 'block_h2'],
             'content' => [$this, 'block_content'],
             'php' => [$this, 'block_php'],
         ];
@@ -87,6 +88,9 @@ class __TwigTemplate_0a639d354daded6e33b75c31b1da5134 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
+        echo "    ";
+        $this->displayBlock('h2', $context, $blocks);
+        // line 7
         $this->displayBlock('content', $context, $blocks);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -96,20 +100,17 @@ class __TwigTemplate_0a639d354daded6e33b75c31b1da5134 extends Template
 
     }
 
-    public function block_content($context, array $blocks = [])
+    // line 6
+    public function block_h2($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "h2"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "h2"));
 
-        // line 7
-        echo "    ";
-        $this->displayBlock('php', $context, $blocks);
-        // line 13
-        echo "    ";
+        echo "Finalisation";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -119,6 +120,29 @@ class __TwigTemplate_0a639d354daded6e33b75c31b1da5134 extends Template
     }
 
     // line 7
+    public function block_content($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
+
+        // line 8
+        echo "    ";
+        $this->displayBlock('php', $context, $blocks);
+        // line 14
+        echo "    ";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 8
     public function block_php($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -128,7 +152,7 @@ class __TwigTemplate_0a639d354daded6e33b75c31b1da5134 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "php"));
 
-        // line 8
+        // line 9
         echo "    <?php
     echo \"<h1>il reste à sauvegarder tout ça...</h1>\"
     echo \$_POST['liste']
@@ -154,7 +178,7 @@ class __TwigTemplate_0a639d354daded6e33b75c31b1da5134 extends Template
 
     public function getDebugInfo()
     {
-        return array (  132 => 8,  122 => 7,  112 => 13,  109 => 7,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
+        return array (  156 => 9,  146 => 8,  136 => 14,  133 => 8,  123 => 7,  104 => 6,  94 => 7,  91 => 6,  81 => 5,  62 => 3,  39 => 1,);
     }
 
     public function getSourceContext()
@@ -164,6 +188,7 @@ class __TwigTemplate_0a639d354daded6e33b75c31b1da5134 extends Template
 {% block title %}Finalisation{% endblock %}
 
 {% block body %}
+    {% block h2 %}Finalisation{% endblock %}
 {% block content %}
     {% block php %}
     <?php
