@@ -55,14 +55,15 @@ class ManifestationRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-    public function searchManifestation($infoManifestation): ?Lieu
+    public function searchManifestation($infoManifestation): array
     {
+        dump($infoManifestation);
         return $this->createQueryBuilder('m')
             /*->Where('m.titre = :titre')
             ->setParameter('titre', $infoManifestation)*/
-            ->innerJoin('m.lieu','lieu')
-            ->andWhere('lieu.lieu = :lieuName')
-            ->setParameter('lieuName', $infoManifestation)
+            ->innerJoin(Lieu::class, 'l','WITH','m.lieu=l.id')
+            ->where('l.lieu = :search')
+            ->setParameter('search', $infoManifestation)
             ->orderBy('m.id', 'ASC')
             ->getQuery()
             ->getResult()

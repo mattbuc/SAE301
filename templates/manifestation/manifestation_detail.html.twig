@@ -11,8 +11,10 @@
     {% endblock %}
     <!-- Fichiers js -->
     {% block javascripts %}
-        <script src="{{ asset('assets/js/main.js') }}" defer></script>
-        <script src="{{ asset('assets/js/scriptgeneral.js') }}" defer></script>
+        <script type="text/javascript" src="{{ asset('assets/js/main.js') }}" defer></script>
+        <script type="text/javascript" src="{{ asset('assets/js/scriptgeneral.js') }}" defer></script>
+        <script type="text/javascript" src="{{ asset('assets/js/scriptpagearticles.js') }}" defer></script>
+        <script type="text/javascript" src="{{ asset('assets/js/scriptpanier.js') }}" defer></script>
     {% endblock %}
 </head>
 <body>
@@ -34,7 +36,7 @@
                 <ul class="boite invisible" id="liens2">
                     {% if app.user %}
                         <li class="sous-boite"><a href="../profil/">Profil</a></li>
-                        <li class="sous-boite"><a href="../panier/">Panier</a></li>
+                        <li class="sous-boite"><a href="../panier/">Panier :<span id="panier">0</span></a></li>
                         <li class="sous-boite"><a href="../logout">Déconnexion</a></li>
 
                     {% else %}
@@ -54,7 +56,7 @@
                         <a href="../accueil">Accueil</a>
                         <a href="../profil">Profil</a>
                         <a href="../manifestation">Événement</a>
-                        <a href="../panier">Panier</a>
+                        <a href="../panier">Panier :<span id="panier">0</span></a>
                         <a href="../logout">Déconnexion</a>
                         <a href="../infoPratique">Info pratique</a>
                     {% endif %}
@@ -81,7 +83,7 @@
             <article class="info_manif">
                 <img src={{ asset('media/') }}{{ Manifestation.getAffiche }} class="affiche_reservation">
                 <h4>Événement : {{ Manifestation.GetGenre }}</h4>
-                <h3>{{ Manifestation.GetTitre }}</h3>
+                <h3 id="article">{{ Manifestation.GetTitre }}</h3>
                 <p>{{ Manifestation.getDescription }}</p>
             </article>
             <article class="info_reservation">
@@ -98,7 +100,7 @@
                 <p>Organisateur : </p>
                 <p>site web : </p>
                 <br>
-                <p>tarif : {{ Manifestation.getPrix }}€</p>
+                <p>tarif : <span id="prix">{{ Manifestation.getPrix }}</span>€</p>
                 <br>
                 <p>Date : {{ Manifestation.getDate }}</p>
                 <br>
@@ -107,7 +109,7 @@
                 {% if app.user %}
                 <div  class="info_reservation_bouton">
                     <input type="number" value="1" min="1" max="99" id="qte">
-                    <input type="hidden" id="id" value="101">
+                    <input type="hidden" id="id" value="{{ Manifestation.getId }}">
                     <button id="ajout">Reserver</button>
                 </div>
                 {% endif %}

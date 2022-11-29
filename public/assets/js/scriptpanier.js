@@ -34,7 +34,7 @@ montab.forEach(uneinfo => {
             id = this.parentNode.parentNode.id; 
             index = montab.findIndex(element => element.id ==id); 
             montab[index].quantite	= parseInt(montab[index].quantite) +1; 
-            document.cookie = JSON.stringify(montab);  
+            document.cookie = "panier="+JSON.stringify(montab)+"; path=/";
             document.getElementById('liste').value=JSON.stringify(montab); 
             console.log(montab)
             totalgeneral += 1*prix
@@ -56,7 +56,7 @@ montab.forEach(uneinfo => {
               id = this.parentNode.parentNode.id;  
               index = montab.findIndex(element => element.id ==id);  
               montab[index].quantite	= parseInt(montab[index].quantite) -1; 
-              document.cookie = JSON.stringify(montab);   
+              document.cookie = "panier="+JSON.stringify(montab)+"; path=/";
               document.getElementById('liste').value=JSON.stringify(montab);  
               console.log(montab)
               totalgeneral -= parsInt(prix)

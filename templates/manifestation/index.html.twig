@@ -7,16 +7,29 @@
     {% block content %}
         {{ form(form) }}
         <section class="template_manifestation">
-        {% for Manifestation in Manifestations %}
+            {% if app.request.method == 'POST' %}
+        {% for ManifestationSearch in ManifestationsSearch %}
+                <div class="manifestation">
+                    <a href=./manifestation/{{ ManifestationSearch.GetId }}><img src={{ asset('media/') }}{{ ManifestationSearch.getAffiche }} class="image_manifestation"></a>
+                    <p></p>
+                    <p>{{ ManifestationSearch.getDate }}</p>
+                    <p>{{ ManifestationSearch.getTitre }}</p>
+                    <p>{{ ManifestationSearch.getDescription }}</p>
+                    <p>{{ ManifestationSearch.getLieu.getLieu }}</p>
+                </div>
+            {% endfor %}
+            {% else %}
+            {% for Manifestation in Manifestations %}
                 <div class="manifestation">
                     <a href=./manifestation/{{ Manifestation.GetId }}><img src={{ asset('media/') }}{{ Manifestation.getAffiche }} class="image_manifestation"></a>
-                    <img src={{ asset('media/notice.png')}} alt="icone_notice" class="notice">
+                    <p></p>
                     <p>{{ Manifestation.getDate }}</p>
                     <p>{{ Manifestation.getTitre }}</p>
                     <p>{{ Manifestation.getDescription }}</p>
                     <p>{{ Manifestation.getLieu.getLieu }}</p>
                 </div>
             {% endfor %}
+            {% endif %}
         </section>
     {% endblock %}
 {% endblock %}
