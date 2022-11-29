@@ -35,6 +35,11 @@ class Lieu
         $this->manifestation = new ArrayCollection();
     }
 
+    public function __toString(): string
+    {
+        return $this->lieu;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

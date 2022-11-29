@@ -4,6 +4,8 @@ namespace App\Controller\Admin;
 
 use App\Entity\Manifestation;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
@@ -19,7 +21,7 @@ class ManifestationCrudController extends AbstractCrudController
     }
 
 
-    public function configureFields(string $pageName): iterable
+    public function configureFields(string $pagename): iterable
     {
         return [
             IdField::new('id')->onlyOnIndex(),
@@ -28,7 +30,8 @@ class ManifestationCrudController extends AbstractCrudController
             TextEditorField::new('casting'),
             TextEditorField::new('description'),
             IntegerField::new('prix'),
-            TextEditorField::new('date')
+            TextEditorField::new('date'),
+            AssociationField::new('lieu', 'Lieu')
         ];
     }
 

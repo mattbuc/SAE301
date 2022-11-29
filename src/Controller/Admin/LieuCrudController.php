@@ -19,16 +19,15 @@ class LieuCrudController extends AbstractCrudController
     }
 
 
-    public function configureFields(string $pageName): iterable
+    /* public function configureFields(string $pageName): iterable
     {
         return [
             IdField::new('id')->onlyOnIndex(),
             TextField::new('Lieu'),
             TextEditorField::new('adresse'),
             IntegerField::new('capacite'),
-            ImageField::new('image')->setBasePath('media/')->setUploadDir('public/media/'),
-            AssociationField::new('manifestation', 'Manifestation')
+            ImageField::new('image')->setBasePath('media/')->setUploadDir('public/media/')
         ];
-    }
+    }*/
 
 }
