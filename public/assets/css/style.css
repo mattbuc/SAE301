@@ -577,35 +577,63 @@ a:hover .notice{
 
 /* page panier */
 
-table {
-    border: 2px solid black;
+#zone{
+    text-align: center;
     width: 80%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #4E4D4D;
+}
+
+.panier_produit{
+    border:2px black solid;
+    padding: 2%;
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 5%;
     color: white;
-}
-
-thead{
-    text-decoration: underline;
-
-}
-
-td {
-    border: 1px solid;
-    text-align: center;
-    padding: 10px;
-    border: none;
+    background-color: #4E4D4D;
 }
 
 .tableau{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    font-size: 1.7em;
 }
 
+.tête{
+    justify-content: center;
+    display: none;
+}
 
+.plus{
+    border-radius: 50px;
+    width: 50px;
+}
+
+.moins{
+    border-radius: 50px;
+    width: 50px;
+}
+
+.prix_total{
+    border: 2px solid black;
+    padding: 2%;
+}
+
+.valider_commande{
+    background-color: #b37047;
+    border-radius: 15px;
+    padding: 3%;
+}
+
+.retour_commande{
+    border-radius: 15px;
+    padding: 3%;
+}
+
+.bouton_commande{
+    display: flex;
+}
 
 /* footer */
 
@@ -839,31 +867,9 @@ footer {
 
     /* page panier */
 
-    table {
-        border: 2px solid black;
-        width: 50%;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background-color: #4E4D4D;
-        color: white;
-    }
-
-    thead{
-        text-decoration: underline;
-    }
-
-    td {
-        border: 1px solid;
-        text-align: center;
-        padding: 10px;
-        border: none;
-    }
-
-    .tableau{
+    .panier_produit{
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-evenly;
     }
 
     /* footer */

@@ -8,12 +8,12 @@ document.getElementById('liste').value="panier="+JSON.stringify(montab)+"; path=
 var totalgeneral=0
 montab.forEach(uneinfo => {  
 
-    html = `<tr id="${uneinfo.id}">
-            <td>${uneinfo.article}</td>
-            <td><button class="moins">-</button><span>${uneinfo.quantite}</span><button class="plus">+</button></td>
-            <td ><span class="unitaire">${uneinfo.prix}</span>€</td>
-            <td><span class="prix">${uneinfo.prix * uneinfo.quantite}</span>€</td>
-            </tr>`;
+    html = `<div id="${uneinfo.id}" class="panier_produit">
+            <div>${uneinfo.article}</div>
+            <div><button class="moins">-</button><span>${uneinfo.quantite}</span><button class="plus">+</button></div>
+            <div ><span class="unitaire">${uneinfo.prix}</span>€</div>
+            <div><span class="prix">${uneinfo.prix * uneinfo.quantite}</span>€</div>
+            </div>`;
 
     document.getElementById('zone').innerHTML += html
     totalgeneral += uneinfo.prix * uneinfo.quantite
