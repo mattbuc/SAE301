@@ -1,8 +1,8 @@
-liste = document.cookie; //recupere le cookie  sous forme de chaine de caractere
-if (liste!="")montab = JSON.parse(liste); // transforme la chaine  en tableau JSON
-else montab =Array(); // si il n'y a pas de tableau dans le cookie alors créer le tableau
-console.log(montab)
-document.getElementById('liste').value=JSON.stringify(montab);
+liste = recupCookie("panier"); //recupere le cookie  sous forme de chaine de caractere 
+if (liste!=null)montab = JSON.parse(liste); // transforme la chaine  en tableau JSON
+else montab =Array() // si il n'y a pas de tableau dans le cookie alors créer le tableau
+console.log(montab);
+document.getElementById('liste').value="panier="+JSON.stringify(montab)+"; path=/";
 
 
 var totalgeneral=0
@@ -34,7 +34,7 @@ montab.forEach(uneinfo => {
             id = this.parentNode.parentNode.id; 
             index = montab.findIndex(element => element.id ==id); 
             montab[index].quantite	= parseInt(montab[index].quantite) +1; 
-            document.cookie = "panier="+JSON.stringify(montab)+"; path=/";
+            document.cookie = JSON.stringify(montab);  
             document.getElementById('liste').value=JSON.stringify(montab); 
             console.log(montab)
             totalgeneral += 1*prix
@@ -47,7 +47,7 @@ montab.forEach(uneinfo => {
     function clickmoins(tag){
           tag.addEventListener('click',function() { 
               qte=this.parentNode.querySelector('span').innerHTML;
-              if (qte>0){qte--};
+              if (qte>0){qte--;}
               this.parentNode.querySelector('span').innerHTML=qte;
               prix=this.parentNode.parentNode.querySelector('.unitaire').innerHTML;
               total= prix*qte;
@@ -56,13 +56,27 @@ montab.forEach(uneinfo => {
               id = this.parentNode.parentNode.id;  
               index = montab.findIndex(element => element.id ==id);  
               montab[index].quantite	= parseInt(montab[index].quantite) -1; 
-              document.cookie = "panier="+JSON.stringify(montab)+"; path=/";
+              document.cookie = JSON.stringify(montab);   
               document.getElementById('liste').value=JSON.stringify(montab);  
               console.log(montab)
-              totalgeneral -= parsInt(prix)
+              totalgeneral -= parseInt(prix)
               document.querySelector('#total').innerHTML=totalgeneral
+              
           })
-    }
 
+          
+    function recupCookie(nom){
+
+        if(document.cookie.length == 0)return null;
+   
+       var cookies = document.cookie.split("; "); //separe chaque parametre contenu dans le cookie
+       cookies.forEach(element => { 
+           ligne=element.split("=");
+           if(ligne[0]===nom) sortie =ligne[1] 
+               else sortie=null;
+           })
+           return sortie
+   }
+    }
 
 

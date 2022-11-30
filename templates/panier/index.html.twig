@@ -5,6 +5,7 @@
 {% block body %}
     {% block h2 %}Panier{% endblock %}
     {% block content %}
+        <div class="tableau">
         <table>
             <thead>
             <tr>
@@ -27,9 +28,6 @@
             <input type="submit" value="Valider ma commande.">
         </form>
         <hr>
-
-        <script type="text/javascript">
-            document.cookie = '[]';
-        </script>
+        </div>
         {% endblock %}
 {% endblock %}
