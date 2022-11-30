@@ -27,10 +27,10 @@ class ManifestationCrudController extends AbstractCrudController
             IdField::new('id')->onlyOnIndex(),
             TextField::new('titre'),
             ImageField::new('affiche')->setBasePath('media/')->setUploadDir('public/media/'),
-            TextEditorField::new('casting'),
-            TextEditorField::new('description'),
+            TextField::new('casting'),
+            TextField::new('description'),
             IntegerField::new('prix'),
-            TextEditorField::new('date'),
+            TextField::new('date'),
             AssociationField::new('lieu', 'Lieu')
         ];
     }

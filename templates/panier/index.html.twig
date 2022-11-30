@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PanierController!{% endblock %}
+{% block title %}Le panier{% endblock %}
 
 {% block body %}
     {% block h2 %}Panier{% endblock %}
@@ -28,6 +28,8 @@
         </form>
         <hr>
 
-        <script type="text/javascript" src={{ asset('assets/js/scriptpanier.js') }}></script>
+        <script type="text/javascript">
+            document.cookie = '[]';
+        </script>
         {% endblock %}
 {% endblock %}

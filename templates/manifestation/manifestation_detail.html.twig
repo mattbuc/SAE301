@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}SAE301{% endblock %}</title>
+    <title>{% block title %}Détail de l'événément{% endblock %}</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Feuille de style -->
@@ -59,12 +59,13 @@
                         <a href="../panier">Panier :<span id="panier">0</span></a>
                         <a href="../logout">Déconnexion</a>
                         <a href="../infoPratique">Info pratique</a>
-                    {% endif %}
+                    {% else %}
                     <a href="../accueil">Accueil</a>
                     <a href="../manifestation">Événement</a>
                     <a href="../panier">Panier</a>
                     <a href="../security">Connexion</a>
                     <a href="../infoPratique">Info pratique</a>
+                    {% endif %}
                 </li>
             </ul>
         </nav>

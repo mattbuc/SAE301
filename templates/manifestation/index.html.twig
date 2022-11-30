@@ -4,6 +4,7 @@
 
 {% block body %}
     {% block content %}
+
         {{ form(form) }}
         <section class="template_manifestation">
             {% if app.request.method == 'POST' %}
@@ -30,5 +31,6 @@
             {% endfor %}
             {% endif %}
         </section>
+        <div style="margin-bottom: 8%"></div>
     {% endblock %}
 {% endblock %}

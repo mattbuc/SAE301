@@ -19,7 +19,6 @@ class ManifestationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('Titre')
             ->add('Lieu', EntityType::class, [
                 'class' => Lieu::class,
                 'choice_label' => 'Lieu',
