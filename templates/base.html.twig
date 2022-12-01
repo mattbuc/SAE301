@@ -23,7 +23,6 @@
             <a href="./accueil" class="logo_lien"><img src={{asset('media/logo_ville2.png')}} alt="Logo_de_la_ville" class="fluid_logo_nav"></a>
             <ul class="navbar" >
                 <a href="./accueil" style="margin-right: 50px;">Accueil</a>
-                <a href="./panier/" style="margin-right: 50px;">Panier :<span id="panier">0</span></a>
                 <div style="margin-right: 50px;">
                     <li id="lien1">Événement</li>
                     <ul class="boite invisible" id="liens1">
@@ -32,13 +31,13 @@
                         <li class="sous-boite"><a href="./infoPratique">Info Pratique</a></li>
                     </ul>
                 </div>
+                <a href="./panier" style="margin-right: 50px;">Panier :<span id="panier">0</span></a>
                 <div>
                     <li id="lien2">Compte</li>
                     <ul class="boite invisible" id="liens2">
                         {% if app.user %}
                         <li class="sous-boite"><a href="./profil/">Profil</a></li>
                         <li class="sous-boite"><a href="./logout">Déconnexion</a></li>
-
                         {% else %}
                         <li class="sous-boite"><a href="./security">Connexion</a></li>
                             <li class="sous-boite"><a href="./register">Inscription</a></li>
