@@ -4,8 +4,12 @@
 
 {% block body %}
     {% block content %}
-
-        {{ form(form) }}
+            {{ form(form) }}
+        {% if app.request.method == 'POST' %}
+        <div class="search_button">
+            <a href="./manifestation" class="return_button">Retour</a>
+        </div>
+        {% endif %}
         <section class="template_manifestation">
             {% if app.request.method == 'POST' %}
         {% for ManifestationSearch in ManifestationsSearch %}
