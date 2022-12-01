@@ -65,18 +65,18 @@ montab.forEach(uneinfo => {
           })
 
           
-    function recupCookie(nom){
 
-        if(document.cookie.length == 0)return null;
-   
-       var cookies = document.cookie.split("; "); //separe chaque parametre contenu dans le cookie
-       cookies.forEach(element => { 
-           ligne=element.split("=");
-           if(ligne[0]===nom) sortie =ligne[1] 
-               else sortie=null;
-           })
-           return sortie
-   }
     }
 
+function recupCookie(nom){
 
+    if(document.cookie.length == 0)return null;
+
+    var cookies = document.cookie.split("; "); //separe chaque parametre contenu dans le cookie
+    cookies.forEach(element => {
+        ligne=element.split("=");
+        if(ligne[0]===nom) sortie =ligne[1]
+        else sortie=null;
+    })
+    return sortie
+}

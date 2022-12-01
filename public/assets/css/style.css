@@ -579,7 +579,6 @@ a:hover .notice{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .form_register > form > div:nth-child(1){
@@ -690,6 +689,11 @@ a:hover .notice{
     margin-right: 4%;
     padding-left: 1%;
     padding-right: 1%;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #4E4D4D;
 }
 
 .retour_commande{
@@ -702,6 +706,33 @@ a:hover .notice{
     margin-bottom: 5%;
     margin-right: 10%;
     justify-content: flex-end;
+}
+
+/* page profil */
+
+.profil{
+    border: 2px solid black;
+    width: 70%;
+    height: 500px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 15%;
+}
+
+.profil_detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.profil_historique{
+    margin-top: 5%;
+}
+
+.profil_image{
+    width: 50%;
+    height: auto;
 }
 
 /* footer */
@@ -955,6 +986,33 @@ footer {
 
     .panier_total_price{
         margin-bottom: 0%;
+    }
+
+    /* Page profil */
+
+    .profil{
+        border: 0px solid black;
+        width: 70%;
+        height: 500px;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        margin-left: 15%;
+    }
+
+    .profil_detail{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
+    }
+
+    .profil_historique{
+        margin-top: 5%;
+    }
+
+    .profil_image{
+        width: 20%;
+        height: auto;
     }
 
     /* footer */

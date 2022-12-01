@@ -60,6 +60,8 @@
                         <a href="./panier">Panier :<span id="panier">0</span></a>
                         <a href="./logout">Déconnexion</a>
                         <a href="./infoPratique">Info pratique</a>
+                            {% elseif is_granted ("ROLE_ADMIN") %}
+                                <a href="./Admin/dashboard.html.twig"></a>
                         {% else %}
                         <a href="./accueil">Accueil</a>
                         <a href="./manifestation">Événement</a>

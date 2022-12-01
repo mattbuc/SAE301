@@ -5,7 +5,20 @@
 {% block body %}
     {% block h2 %}Profil{% endblock %}
     {% block content %}
+        <section class="profil">
 
+            <div class="profil_detail">
+                <img src="{{ asset('media/profil.png') }}" alt="" class="profil_image">
+            </div>
+            <div class="profil_detail">
+                <h4>{% app.user.nom %}</h4>
+                <h4>Prenom</h4>
+                <h4>email</h4>
+            </div>
+            <div class="profil_historique">
+                <h4 style="text-decoration: underline;">Historique de commande</h4>
+            </div>
+        </section>
         {% endblock %}
 {% endblock %}
 
