@@ -418,7 +418,8 @@ a:hover .notice{
 
 .info_reservation_bouton{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: start;
 }
 
 .sous_info_reservation{
@@ -431,6 +432,17 @@ a:hover .notice{
 
 .info_manif p{
     padding: 5%;
+}
+
+.manif_details_unlog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bouton_unlog{
+    border-radius: 20px;
+    padding: 5px;
 }
 
 .affiche_reservation{
@@ -584,7 +596,8 @@ a:hover .notice{
 
 .panier_produit{
     border:2px black solid;
-    padding: 2%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     width: 100%;
     margin-top: 10%;
     margin-bottom: 5%;
@@ -610,29 +623,69 @@ a:hover .notice{
     width: 50px;
 }
 
+.plus:hover{
+    cursor: pointer;
+}
+
 .moins{
     border-radius: 50px;
     width: 50px;
 }
 
+.moins:hover{
+    cursor: pointer;
+}
+
+.panier_price{
+    margin-bottom: 6%;
+}
+
+.panier_event{
+    margin-bottom: 6%;
+}
+
+.panier_place{
+    margin-bottom: 6%;
+}
+
+.panier_total_price{
+    margin-bottom: 6%;
+}
+
 .prix_total{
     border: 2px solid black;
     padding: 2%;
+    margin-bottom: 2%;
 }
 
 .valider_commande{
     background-color: #b37047;
+    color: white;
     border-radius: 15px;
-    padding: 3%;
+    padding: 4%;
+}
+
+.valider_commande:hover{
+    cursor: pointer;
 }
 
 .retour_commande{
     border-radius: 15px;
-    padding: 3%;
+    margin-right: 4%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.retour_commande{
+    cursor: pointer;
 }
 
 .bouton_commande{
     display: flex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 10%;
+    justify-content: flex-end;
 }
 
 /* footer */
@@ -870,6 +923,22 @@ footer {
     .panier_produit{
         display: flex;
         justify-content: space-evenly;
+    }
+
+    .panier_price{
+        margin-bottom: 0%;
+    }
+
+    .panier_event{
+        margin-bottom: 0%;
+    }
+
+    .panier_place{
+        margin-bottom: 0%;
+    }
+
+    .panier_total_price{
+        margin-bottom: 0%;
     }
 
     /* footer */

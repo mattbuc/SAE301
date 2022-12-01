@@ -41,7 +41,7 @@
 
                     {% else %}
                         <li class="sous-boite"><a href="../security">Connexion</a></li>
-                        <li class="sous-boite"><a href="../registration">Inscription</a></li>
+                        <li class="sous-boite"><a href="../register">Inscription</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -62,8 +62,8 @@
                     {% else %}
                     <a href="../accueil">Accueil</a>
                     <a href="../manifestation">Événement</a>
-                    <a href="../panier">Panier</a>
                     <a href="../security">Connexion</a>
+                        <a href="../register">Inscription</a>
                     <a href="../infoPratique">Info pratique</a>
                     {% endif %}
                 </li>
@@ -101,7 +101,7 @@
                 <p>Organisateur : </p>
                 <p>site web : </p>
                 <br>
-                <p>tarif : <span id="prix">{{ Manifestation.getPrix }}</span>€</p>
+                <p style="color: red; text-decoration: underline">tarif : <span id="prix">{{ Manifestation.getPrix }}</span>€</p>
                 <br>
                 <p>Date : {{ Manifestation.getDate }}</p>
                 <br>
@@ -113,6 +113,13 @@
                     <input type="hidden" id="id" value="{{ Manifestation.getId }}">
                     <button id="ajout">Reserver</button>
                 </div>
+                    {% else %}
+                    <div class="manif_details_unlog">
+                        <p>Connectez-vous</p>
+                        <button class="bouton_unlog"><a href="../security">Connexion</a></button>
+                        <p>Si vous n'êtes pas inscrit</p>
+                        <button class="bouton_unlog"><a href="../register">Inscrivez-vous</a></button>
+                    </div>
                 {% endif %}
             </article>
         </section>
