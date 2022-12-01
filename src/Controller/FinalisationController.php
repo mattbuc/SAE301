@@ -11,6 +11,8 @@ class FinalisationController extends AbstractController
     #[Route('/finalisation', name: 'app_finalisation')]
     public function index(): Response
     {
+
+
         return $this->render('finalisation/index.html.twig', [
             'Finalisation' => 'FinalisationController',
         ]);
