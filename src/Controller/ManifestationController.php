@@ -23,11 +23,10 @@ class ManifestationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $infoManifestation = $form->getData();
 
-            /*dd($infoManifestation);*/
 
             $manifestationForm = $manifestationRepository->searchManifestation($infoManifestation->getLieu()->getLieu());
 
-            /*dd($manifestationForm);*/
+
 
             return $this->render('manifestation/index.html.twig', [
                 'ManifestationsSearch' => $manifestationForm,
