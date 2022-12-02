@@ -1,16 +1,21 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Finalisation{% endblock %}
-
+{% block  javascripts %}
+    <script type="text/javascript" defer>
+        js_Liste = JSON.parse({{ Liste }});
+        document.getElementById("id_Liste").innerHTML = js_Liste;
+        console.log(js_Liste);
+    </script>
+{% endblock %}
 {% block body %}
     {% block h2 %}Finalisation{% endblock %}
+
 {% block content %}
-    <div>
+    <div class="finalisation_panier">
         <h3>Voici vos futurs achats</h3>
-    </div>
-    <div>
         <h4>Toutes vos places seront envoyées sur votre adresse mail en format E-billet.</h4>
-        <span>{{ panier }}</span>
+        <span id="id_Liste">{{ Liste }}</span>
     </div>
     {% endblock %}
 {% endblock %}

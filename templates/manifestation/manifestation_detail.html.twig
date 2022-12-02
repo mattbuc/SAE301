@@ -94,14 +94,14 @@
                     <img src={{ asset('media/notice.png')}} alt="" class="notice_info">
                     <h3>Info pratique</h3>
                 </div>
-                <p>Accés libre : </p>
-                <p>Accés handicapé : </p>
-                <p>Sur réservation : </p>
-                <p>Familial : </p>
-                <p>Jeune public : </p>
+                <p>Accés libre : {{ Manifestation.getLieu.getAcceslibre }}</p>
+                <p>Accés handicapé : {{ Manifestation.getLieu.getAcceshandicape }}</p>
+                <p>Sur réservation : {{ Manifestation.getLieu.getReservation }}</p>
                 <br>
-                <p>Organisateur : </p>
-                <p>site web : </p>
+                <p>Jeune public : {{ Manifestation.getLieu.getJeunepublic }}</p>
+                <br>
+                <p>Organisateur : {{ Manifestation.getLieu.getOrganisateur }}</p>
+                <p class="web">site web : {{ Manifestation.getLieu.getWeb }}</p>
                 <br>
                 <p style="color: red; text-decoration: underline">tarif : <span id="prix">{{ Manifestation.getPrix }}</span>€</p>
                 <br>

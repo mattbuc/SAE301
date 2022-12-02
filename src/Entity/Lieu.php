@@ -30,6 +30,24 @@ class Lieu
     #[ORM\Column(length: 255)]
     private ?string $image = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $acces_libre = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $acces_handicape = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $reservation = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $jeune_public = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $organisateur = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $web = null;
+
     public function __construct()
     {
         $this->manifestation = new ArrayCollection();
@@ -119,6 +137,78 @@ class Lieu
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getAccesLibre(): ?string
+    {
+        return $this->acces_libre;
+    }
+
+    public function setAccesLibre(string $acces_libre): self
+    {
+        $this->acces_libre = $acces_libre;
+
+        return $this;
+    }
+
+    public function getAccesHandicape(): ?string
+    {
+        return $this->acces_handicape;
+    }
+
+    public function setAccesHandicape(string $acces_handicape): self
+    {
+        $this->acces_handicape = $acces_handicape;
+
+        return $this;
+    }
+
+    public function getReservation(): ?string
+    {
+        return $this->reservation;
+    }
+
+    public function setReservation(string $reservation): self
+    {
+        $this->reservation = $reservation;
+
+        return $this;
+    }
+
+    public function getJeunePublic(): ?string
+    {
+        return $this->jeune_public;
+    }
+
+    public function setJeunePublic(string $jeune_public): self
+    {
+        $this->jeune_public = $jeune_public;
+
+        return $this;
+    }
+
+    public function getOrganisateur(): ?string
+    {
+        return $this->organisateur;
+    }
+
+    public function setOrganisateur(string $organisateur): self
+    {
+        $this->organisateur = $organisateur;
+
+        return $this;
+    }
+
+    public function getWeb(): ?string
+    {
+        return $this->web;
+    }
+
+    public function setWeb(string $web): self
+    {
+        $this->web = $web;
 
         return $this;
     }

@@ -12,9 +12,11 @@ class FinalisationController extends AbstractController
     public function index(): Response
     {
 
+        $liste = $_POST["liste"];
 
         return $this->render('finalisation/index.html.twig', [
             'Finalisation' => 'FinalisationController',
+            'Liste' => $liste,
         ]);
     }
 }
