@@ -784,6 +784,14 @@ pre{
     display: none;
 }
 
+pre.sf-dump{
+    display: none;
+}
+
+pre.sf-dump, pre.sf-dump .sf-dump-default {
+    display: none;
+}
+
 /* footer */
 
 footer {
