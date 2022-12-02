@@ -778,6 +778,12 @@ a:hover .notice{
     color: #987018;
 }
 
+/* dump */
+
+pre{
+    display: none;
+}
+
 /* footer */
 
 footer {
