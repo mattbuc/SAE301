@@ -13,7 +13,7 @@ document.getElementById('ajout').addEventListener('click',function() {
                 }
     else        {
                 console.log("l'article n'est pas pour l'instant dans le panier, il va falloir l'ajouter")
-                montab.push({ 'id': id, 'titre': titre, 'quantite': document.getElementById('qte').value , 'prix': prix})
+                montab.push({ 'id': id, 'article': article, 'quantite': document.getElementById('qte').value , 'prix': prix})
                 console.log(montab)
                 }
     
