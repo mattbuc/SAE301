@@ -1,7 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Le panier{% endblock %}
+{% block  javascripts %}
 
+    {{ parent() }}
+{% endblock %}
 {% block body %}
     {% block h2 %}Panier{% endblock %}
     {% block content %}
@@ -13,14 +16,18 @@
             <div class="prix_total">prix total : <span id="total">0</span>€</div>
         </div>
         <div class="bouton_commande">
-            <a href="./manifestation" class="retour_commande">Retour</a>
+            <a href="./manifestation" class="retour_commande">Retour aux Événements</a>
+            {% if app.user %}
             <form action="./finalisation" method="post">
                 <input type="hidden" name="liste" id="liste">
                 <input type="submit" value="Valider ma commande." class="valider_commande">
             </form>
-        </div>
-
-
+            {% else %}
+            <form action="./security" method="post">
+                <input type="hidden" name="liste" id="liste">
+                <input type="submit" value="Valider ma commande." class="valider_commande">
+            </form>
+            {% endif %}
         </div>
         {% endblock %}
 {% endblock %}

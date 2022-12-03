@@ -752,7 +752,7 @@ a:hover .notice{
     flex-direction: column;
     align-items: flex-start;
     margin-left: 10%;
-    height: 500px;
+    height: 100%;
     padding: 2%;
     margin-bottom: 5%;
 }
@@ -790,6 +790,116 @@ pre.sf-dump{
 
 pre.sf-dump, pre.sf-dump .sf-dump-default {
     display: none;
+}
+
+/* finalisation */
+
+.carte{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5%;
+}
+
+
+
+.carte_nom{
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.carte_code{
+    width: 70%;
+    margin-top: 2%;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.carte_date{
+    width: 30%;
+    margin-top: 2%;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.carte_codedos{
+    width: 25%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.carte_valide{
+    width: 50%;
+    border-radius: 20px;
+    height: 50px;
+    margin-left: 5%;
+}
+
+.paypal{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 5%;
+}
+
+.paypal_compte{
+    width: 40%;
+    border-radius: 20px;
+    margin-top: 5%;
+    height: 50px;
+}
+
+.paypal_iban{
+    width: 80%;
+    margin-top: 5%;
+    border-radius: 20px;
+    height: 50px;
+    margin-bottom: 2%;
+}
+
+.mode{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mode_achat{
+    width: 15%;
+}
+
+.mode_achat2{
+    width: 10%;
+}
+
+.invisible_mode{
+    display: none;
+}
+
+/* page terminer */
+
+.terminer{
+    display: flex;
+    width: 80%;
+    height: 500px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 10%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.terminer > p{
+    margin-top: 2%;
+}
+
+.terminer > a > button{
+    padding: 1%;
+    cursor: pointer;
+    margin-top: 50%;
 }
 
 /* footer */
@@ -1076,6 +1186,95 @@ footer > div > h5{
     .profil_image{
         width: 20%;
         height: auto;
+    }
+
+    /* finalisation */
+
+    .carte{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-top: 5%;
+        margin-left: 35%;
+    }
+
+
+
+    .carte_nom{
+        width: 50%;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .carte_code{
+        width: 70%;
+        margin-top: 2%;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .carte_date{
+        width: 30%;
+        margin-top: 2%;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .carte_codedos{
+        width: 25%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .carte_valide{
+        width: 50%;
+        border-radius: 20px;
+        height: 50px;
+        margin-left: 5%;
+    }
+
+    .paypal{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-top: 5%;
+        margin-left: 35%;
+    }
+
+    .paypal_compte{
+        width: 40%;
+        border-radius: 20px;
+        margin-top: 5%;
+        height: 50px;
+    }
+
+    .paypal_iban{
+        width: 80%;
+        margin-top: 5%;
+        border-radius: 20px;
+        height: 50px;
+        margin-bottom: 2%;
+    }
+
+    .mode{
+        margin-top: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mode_achat{
+        width: 15%;
+    }
+
+    .mode_achat2{
+        width: 10%;
+    }
+
+    .invisible_mode{
+        display: none;
     }
 
     /* footer */

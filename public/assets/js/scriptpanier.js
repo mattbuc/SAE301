@@ -2,7 +2,6 @@ liste = recupCookie("panier")
 if (liste!=null) var montab = JSON.parse(liste)
 else montab = Array()
 console.log(montab)
-
 document.getElementById('liste').value=JSON.stringify(montab);
 
 

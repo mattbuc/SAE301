@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Achat Terminer{% endblock %}
+
+{% block body %}
+    {% block h2 %}Achat Finaliser{% endblock %}
+{% block content %}
+    <div class="terminer">
+        <p>Tout vos achats on était accepter.</p>
+        <p>Vous recevrez vos E-billet sur votre boîte mail.</p>
+        <a href="./profil"><button>Revenir à votre Profil</button></a>
+    </div>
+    <script type="text/javascript">
+        document.cookie = '[]';
+    </script>
+    {% endblock %}
+{% endblock %}

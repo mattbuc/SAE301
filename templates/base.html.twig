@@ -11,13 +11,11 @@
         {% endblock %}
         <!-- Fichiers js -->
         {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('assets/js/mode.js') }}" defer></script>
             <script type="text/javascript" src="{{ asset('assets/js/main.js') }}" defer></script>
             <script type="text/javascript" src="{{ asset('assets/js/scriptgeneral.js') }}" defer></script>
             <script type="text/javascript" src="{{ asset('assets/js/scriptpagearticles.js') }}" defer></script>
             <script type="text/javascript" src="{{ asset('assets/js/scriptpanier.js') }}" defer></script>
-            <script type="text/javascript">
-                console.log('test')
-            </script>
         {% endblock %}
     </head>
     <body>

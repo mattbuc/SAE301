@@ -1,12 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Finalisation{% endblock %}
-{% block  javascripts %}
-    <script type="text/javascript" defer>
-        js_Liste = JSON.parse({{ Liste }});
-        document.getElementById("id_Liste").innerHTML = js_Liste;
-        console.log(js_Liste);
+{% block javascripts%}
+    <script type="text/javascript">
+        var liste_transform = "{{ Liste }}"
+        var js_Liste = JSON.parse(liste_transform.replace(/(&quot\;)/g,"\""))
+        console.log(js_Liste)
+        var i = 0;
+        function afficherliste(){
+            var article = (js_Liste[i].article);
+            document.getElementById("id_Liste").innerHTML = article;
+            console.log(js_Liste[i].article);
+        }
+        afficherliste();
+
+        /*console.log(js_Liste.id);
+        console.log(js_Liste);*/
     </script>
+    {{ parent() }}
 {% endblock %}
 {% block body %}
     {% block h2 %}Finalisation{% endblock %}
@@ -15,7 +26,23 @@
     <div class="finalisation_panier">
         <h3>Voici vos futurs achats</h3>
         <h4>Toutes vos places seront envoyées sur votre adresse mail en format E-billet.</h4>
-        <span id="id_Liste">{{ Liste }}</span>
+        <span id="id_Liste"></span>
+        <div class="mode">
+            <img src={{ asset('media/mastercard.png')}}  class="mode_achat" id="mode1">
+            <img src={{ asset('media/paypal.png')}} class="mode_achat2" id="mode2">
+        </div>
+        <form action="./terminer" class="carte invisible_mode" id="carte">
+            <input type="text" class="carte_nom" placeholder="Prenom Nom de la carte" required>
+            <input type="text" class="carte_code" placeholder="Code de Carte" required>
+            <input type="text" class="carte_date" placeholder="**/**" required>
+            <input type="text" class="carte_codedos" placeholder="Code à 3 chiffres" required>
+            <input type="submit" value="Valider ma commande" class="carte_valide">
+        </form>
+        <form action="./terminer" class="paypal invisible_mode" id="paypal">
+            <input type="text" class="paypal_compte" placeholder="Compte Paypal" required>
+            <input type="text" class="paypal_iban" placeholder="Code Paypal" required>
+            <input type="submit" value="Valider ma commande" class="carte_valide">
+        </form>
     </div>
     {% endblock %}
 {% endblock %}
