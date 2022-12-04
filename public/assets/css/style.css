@@ -802,15 +802,14 @@ pre.sf-dump, pre.sf-dump .sf-dump-default {
 }
 
 
-
 .carte_nom{
-    width: 50%;
+    width: 80%;
     height: 40px;
     border-radius: 20px;
 }
 
 .carte_code{
-    width: 70%;
+    width: 90%;
     margin-top: 2%;
     height: 40px;
     border-radius: 20px;
@@ -832,7 +831,7 @@ pre.sf-dump, pre.sf-dump .sf-dump-default {
 }
 
 .carte_valide{
-    width: 50%;
+    width: 100%;
     border-radius: 20px;
     height: 50px;
     margin-left: 5%;
@@ -846,14 +845,14 @@ pre.sf-dump, pre.sf-dump .sf-dump-default {
 }
 
 .paypal_compte{
-    width: 40%;
+    width: 150%;
     border-radius: 20px;
     margin-top: 5%;
     height: 50px;
 }
 
 .paypal_iban{
-    width: 80%;
+    width: 150%;
     margin-top: 5%;
     border-radius: 20px;
     height: 50px;
@@ -871,12 +870,36 @@ pre.sf-dump, pre.sf-dump .sf-dump-default {
     width: 15%;
 }
 
+.mode_achat:hover{
+    cursor: pointer;
+}
+
 .mode_achat2{
     width: 10%;
 }
 
+.mode_achat2{
+    cursor: pointer;
+}
+
 .invisible_mode{
     display: none;
+}
+
+#finalpayement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final_produit{
+    margin-right: 5%;
+    margin-left: 2%;
+    margin-bottom: 5%;
+    padding: 1%;
+    border: 2px solid ;
+    border-radius: 20px;
+    text-align: center;
 }
 
 /* page terminer */

@@ -1,31 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Finalisation{% endblock %}
-{% block javascripts%}
-    <script type="text/javascript">
-        var liste_transform = "{{ Liste }}"
-        var js_Liste = JSON.parse(liste_transform.replace(/(&quot\;)/g,"\""))
-        console.log(js_Liste)
-        var i = 0;
-        function afficherliste(){
-            var article = (js_Liste[i].article);
-            document.getElementById("id_Liste").innerHTML = article;
-            console.log(js_Liste[i].article);
-        }
-        afficherliste();
 
-        /*console.log(js_Liste.id);
-        console.log(js_Liste);*/
-    </script>
-    {{ parent() }}
-{% endblock %}
-{% block body %}
     {% block h2 %}Finalisation{% endblock %}
 
 {% block content %}
+    <div id="finalpayement">
+
+    </div>
     <div class="finalisation_panier">
         <h3>Voici vos futurs achats</h3>
         <h4>Toutes vos places seront envoyées sur votre adresse mail en format E-billet.</h4>
+        <br>
+        <h4>Veuillez-choisir un moyen de payement.</h4>
         <span id="id_Liste"></span>
         <div class="mode">
             <img src={{ asset('media/mastercard.png')}}  class="mode_achat" id="mode1">
@@ -44,5 +31,28 @@
             <input type="submit" value="Valider ma commande" class="carte_valide">
         </form>
     </div>
+    <script type="text/javascript">
+
+        liste = '{{ Liste }}';
+        finalListe = JSON.parse(liste.replace(/(&quot\;)/g,"\""));
+
+        console.log(liste)
+        finalListe.forEach(uneinfo => {
+
+
+            html = `<div id="${uneinfo.id}" class="final_produit">
+                <h4>${uneinfo.article}</h4>
+                <div class="finalP_info">
+                    <p> Prix à l'unité : ${uneinfo.prix}</p> <p> Qté : ${uneinfo.quantite}</p>
+                </div>
+
+            </div>`;
+
+            document.getElementById('finalpayement').innerHTML += html
+
+        })
+
+    </script>
     {% endblock %}
-{% endblock %}
+
+
