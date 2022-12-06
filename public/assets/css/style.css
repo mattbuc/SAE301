@@ -831,7 +831,7 @@ pre.sf-dump, pre.sf-dump .sf-dump-default {
 }
 
 .carte_valide{
-    width: 100%;
+    width: 80%;
     border-radius: 20px;
     height: 50px;
     margin-left: 5%;
@@ -888,17 +888,22 @@ pre.sf-dump, pre.sf-dump .sf-dump-default {
 
 #finalpayement{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+.final_produit:nth-child(even){
+    background-color: #938f8f;
+}
+
+.final_produit:nth-child(odd){
+    background-color: #dbd8d8;
 }
 
 .final_produit{
-    margin-right: 5%;
-    margin-left: 2%;
-    margin-bottom: 5%;
     padding: 1%;
-    border: 2px solid ;
-    border-radius: 20px;
     text-align: center;
 }
 

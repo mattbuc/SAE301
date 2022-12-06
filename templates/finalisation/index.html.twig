@@ -5,12 +5,12 @@
     {% block h2 %}Finalisation{% endblock %}
 
 {% block content %}
-    <div id="finalpayement">
 
-    </div>
     <div class="finalisation_panier">
         <h3>Voici vos futurs achats</h3>
         <h4>Toutes vos places seront envoyées sur votre adresse mail en format E-billet.</h4>
+        <br>
+        <div id="finalpayement"></div>
         <br>
         <h4>Veuillez-choisir un moyen de payement.</h4>
         <span id="id_Liste"></span>
@@ -43,7 +43,7 @@
             html = `<div id="${uneinfo.id}" class="final_produit">
                 <h4>${uneinfo.article}</h4>
                 <div class="finalP_info">
-                    <p> Prix à l'unité : ${uneinfo.prix}</p> <p> Qté : ${uneinfo.quantite}</p>
+                    <p> Prix à l'unité : ${uneinfo.prix}€</p> <p> Quantité : ${uneinfo.quantite}</p>
                 </div>
 
             </div>`;
