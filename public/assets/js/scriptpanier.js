@@ -51,6 +51,16 @@ montab.forEach(uneinfo => {
         qte--;
         this.parentNode.querySelector('span').innerHTML=qte;
         prix=this.parentNode.parentNode.querySelector('.unitaire').innerHTML;
+            if (qte <= 0) {
+                document.getElementById(id).remove()
+                totalgeneral -= parseInt(prix)
+                total -= 1*prix
+                document.querySelector('#total').innerHTML=totalgeneral
+                document.querySelector('#nbtotal').innerHTML=total
+                index = montab.findIndex(element => element.id == id);
+                document.cookie = "panier="+JSON.stringify(montab)+"; path=/"  // sauvegarde des infos dans le cookie "liste"
+                montab.splice(index, 1);
+            }
             total= prix*qte;
             this.parentNode.parentNode.querySelector('.prix').innerHTML=total;
 
